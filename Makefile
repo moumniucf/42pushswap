@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 HEADER = push_swap.h
 
-SRC = ft_isdigit.c
+SRC = ft_isdigit.c mouvementpsr.c
 
 OBG = $(SRC:%.c=%.o)
 
