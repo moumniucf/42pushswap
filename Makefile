@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 HEADER = push_swap.h
 
-SRC = ft_isdigit.c mouvementpsr.c
+SRC = creatstack.c push_swap.c swapab.c
 
 OBG = $(SRC:%.c=%.o)
 
@@ -20,7 +20,7 @@ $(NAME) : $(OBG)
 	@ar rc $(NAME) $(OBG)
 clean : 
 	@rm -f $(OBG)
-fclean :
+fclean : clean
 	@rm -f $(NAME)
 re : fclean all
-PHONY : clean fclean
+PHONY : fclean

@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   creatstack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 11:55:49 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/15 12:59:25 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/01/17 19:46:02 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-int		ft_isdigit(int c)
+stack	*new_node(int value)
 {
-    if (c >= 48 && c <= 57)
-        return (1);
-    else
-        return (0);
+	stack *node;
+	node = malloc(sizeof(stack));
+	if (!node)
+		return (NULL);
+	node->data = value;
+	node->next = NULL;
+	node->prev = NULL;
+	return (node);
 }

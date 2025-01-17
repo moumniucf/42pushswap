@@ -6,23 +6,14 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/15 13:00:57 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/17 19:49:46 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 int main(int ac, char **av)
 {
-	int i = 0;
-	while(av[1][i++])
-	{
-		if (ft_isdigit(&av[1][i] == 0))
-		{
-			write(1, "Error\n", 6);
-		}
-		else
-		{
-			write(1, "ok\n", 3);
-		}
-	}	
+	(void)(ac);
+	(void)(av);
+	printf("ok");	
 }
