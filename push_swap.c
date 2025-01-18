@@ -6,14 +6,21 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/17 19:49:46 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/18 11:07:56 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 int main(int ac, char **av)
 {
-	(void)(ac);
-	(void)(av);
-	printf("ok");	
+	stack *a = (stack *)av[1];
+	int i = 0;
+	if (ac)
+	{
+		while(av[1][i])
+		{
+			sa(&a);
+		}
+		i++;
+	}
 }
