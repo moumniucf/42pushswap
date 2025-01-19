@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 10:21:15 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/18 18:20:03 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/19 15:50:45 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 void	pa(stack **a, stack **b)
 {
 	stack *top_b;
-	*a = top_b->next;
+	top_b = *b;
+	*b = (*b)->next;
+	top_b->next = *a;
+	*a = top_b;
 }
 int main()
 {
