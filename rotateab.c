@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_ab.c                                          :+:      :+:    :+:   */
+/*   rotateab.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/18 10:21:15 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/20 12:22:27 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/01/20 13:40:30 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/01/20 18:55:57 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-void	pa(stack **a, stack **b)
+void	rotate(stack **head)
 {
-	stack	*top_b;
-	top_b = *b;
-	top_b->next = (*a);
-	top_b->prev = NULL;
-	*a = top_b;
-	write(1, "pa\n", 3);
+	stack *last;
+	last = ft_lstlast(*head);
+	last->next = (*head);
+	*head = (*head)->next;
+	(*head)->prev = NULL;
+    // last->next->prev = last;
+    last->next->next = NULL;
 }
-void	pb(stack **a, stack **b)
+void	ra(stack **a)
 {
-	stack *top_a;
-	top_a = *a;
-	top_a->next = (*b);
-	top_a->prev = NULL;
-	*b = top_a;
-	write(1, "pb\n", 3);
+	rotate(a);
+	write(1, "ra\n", 3);
+}
+void	rb(stack **b)
+{
+	rotate(b);
+	write(1, "rb\n", 3);
 }
 int main()
 {
-	stack *node1 = new_node(10);
-	stack *node2 = new_node(20);
-	stack *node3 = new_node(30);
+	stack *node1 = new_node(5);
+	stack *node2 = new_node(6);
+	stack *node3 = new_node(7);
+	stack *node4 = new_node(8);
 	stack *head = node1;
 	node1->next = node2;
 	node2->next = node3;
-	stack *nodeplus = new_node(5);
-	// pb(&nodeplus, &head);
-	pa(&head, &nodeplus);
+	node3->next = node4;
+	// rotate(&head);
+	rb(&head);
 	while(head)
 	{
 		printf("%d\n", head->data);
