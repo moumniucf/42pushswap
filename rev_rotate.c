@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creatstack.c                                       :+:      :+:    :+:   */
+/*   rev_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/21 16:04:22 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/01/21 17:03:54 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/01/21 17:07:01 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-stack	*new_node(int value)
+void	rev_rotate(stack **head)
 {
-	stack *node;
-	node = malloc(sizeof(stack));
-	if (!node)
-		return (NULL);
-	node->data = value;
-	node->next = NULL;
-	node->prev = NULL;
-	return (node);
+	
 }

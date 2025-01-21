@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/20 15:21:48 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/21 17:05:23 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,9 @@ void	sb(stack **b);
 void	ss(stack **a, stack **b);
 char	**ft_split(char const *s, char c);
 stack	*ft_lstlast(stack *lst);
+void	rotate(stack **head);
+void	ra(stack **a);
+void	rb(stack **b);
+void	rr(stack **a, stack **b);
+int		ft_atoi(const char *str);
 #endif
