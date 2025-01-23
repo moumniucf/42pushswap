@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 HEADER = push_swap.h
 
-SRCS = creatstack.c push_swap.c swapab.c ft_lstlast.c ft_split.c rotate.c push_ab.c
+SRCS = creatstack.c push_swap.c swapab.c ft_lstlast.c ft_split.c  push_ab.c rotateab.c rev_rotate.c
 
 OBJS = $(SRCS:%.c=%.o)
 
@@ -16,7 +16,7 @@ all : $(NAME)
 	@$(CC) -c $< $(CFLAGS) -o $@
 	@echo "compiling" $< "to" $@
 
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS) $(HEADER)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 clean : 
 	@rm -f $(OBJS)

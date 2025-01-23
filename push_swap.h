@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/21 17:05:23 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/22 17:35:31 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,22 @@ typedef	struct	s_stack
 #include <unistd.h>
 #include <limits.h>
 stack	*new_node(int value);
+stack	*ft_lstlast(stack *lst);
+int		ft_atoi(const char *str);
+char	**ft_split(char const *s, char c);
 void	*freefun(char **s);
 void	sw_ap(stack **head);
 void	sa(stack **a);
 void	sb(stack **b);
 void	ss(stack **a, stack **b);
-char	**ft_split(char const *s, char c);
-stack	*ft_lstlast(stack *lst);
 void	rotate(stack **head);
 void	ra(stack **a);
 void	rb(stack **b);
 void	rr(stack **a, stack **b);
-int		ft_atoi(const char *str);
+void	rev_rotate(stack **head);
+void	rra(stack **a);
+void	rrb(stack **b);
+void	rrr(stack **a, stack **b);
+void	pa(stack **a, stack **b);
+void	pb(stack **a, stack **b);
 #endif
