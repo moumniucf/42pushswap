@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/22 17:35:31 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/25 12:18:56 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ stack	*ft_lstlast(stack *lst);
 int		ft_atoi(const char *str);
 char	**ft_split(char const *s, char c);
 void	*freefun(char **s);
+int		ft_isdigit(int c);
+void	ft_lstadd_back(stack **lst, stack *new);
+int		ft_lstsize(stack *lst);
 void	sw_ap(stack **head);
 void	sa(stack **a);
 void	sb(stack **b);

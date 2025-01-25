@@ -1,4 +1,4 @@
-NAME = push_swap
+NAME = parss
 
 CC = cc
 
