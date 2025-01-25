@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/25 18:29:40 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/25 20:16:31 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,9 @@ void	sortthree(stack **head)
 	{
 		sa(head);
 	}
-	else if((first->data) > (last->data) && (last->data) > (first->data))
+	else if ((first->data) > (second->data) > (last->data))
 	{
-		ra(head);
-	}
-	else if ((first->data) > (last->data))
-	{
+		// sa(head);
 		rra(head);
 	}
 }
