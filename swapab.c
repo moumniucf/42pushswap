@@ -6,16 +6,16 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 15:43:39 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/18 11:55:44 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/27 12:24:40 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sw_ap(stack **head)
+void	sw_ap(t_stack **head)
 {
-	stack	*first;
-	stack	*second;
+	t_stack	*first;
+	t_stack	*second;
 	int		tmp;
 
 	if (!(*head) || !(*head)->next)
@@ -27,7 +27,7 @@ void	sw_ap(stack **head)
 	second->data = tmp;
 }
 
-void	sa(stack **a)
+void	sa(t_stack **a)
 {
 	if (!(*a) || !(*a)->next)
 		return ;
@@ -35,7 +35,7 @@ void	sa(stack **a)
 	write(1, "sa\n", 3);
 }
 
-void	sb(stack **b)
+void	sb(t_stack **b)
 {
 	if (!(*b) || !(*b)->next)
 		return ;
@@ -43,7 +43,7 @@ void	sb(stack **b)
 	write(1, "sb\n", 3);
 }
 
-void	ss(stack **a, stack **b)
+void	ss(t_stack **a, t_stack **b)
 {
 	if (!(*a) || !(*a)->next || !(*b) || !(*b)->next)
 		return ;

@@ -6,15 +6,15 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 10:21:15 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/26 16:55:03 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/27 12:25:30 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(stack **a, stack **b)
+void	pa(t_stack **a, t_stack **b)
 {
-	stack	*top_b;
+	t_stack	*top_b;
 
 	if (!(*b))
 		return ;
@@ -28,9 +28,9 @@ void	pa(stack **a, stack **b)
 	write(1, "pa\n", 3);
 }
 
-void	pb(stack **a, stack **b)
+void	pb(t_stack **a, t_stack **b)
 {
-	stack	*top_a;
+	t_stack	*top_a;
 
 	if (!(*a))
 		return ;
@@ -46,11 +46,11 @@ void	pb(stack **a, stack **b)
 
 // int main()
 // {
-// 	stack *node1 = new_node(5);
-// 	stack *node2 = new_node(6);
-// 	stack *node3 = new_node(7);
-// 	stack *node4 = new_node(8);
-// 	stack *stacka = node1;
+// 	t_stack *node1 = new_node(5);
+// 	t_stack *node2 = new_node(6);
+// 	t_stack *node3 = new_node(7);
+// 	t_stack *node4 = new_node(8);
+// 	t_stack *stacka = node1;
 // 	node1->next = node2;
 // 	node1->prev = NULL;
 // 	node2->next = node3;
@@ -59,11 +59,11 @@ void	pb(stack **a, stack **b)
 // 	node3->prev = node2;
 // 	node4->next = NULL;
 // 	node4->prev = node3;
-// 	stack *nodea = new_node(1);
-// 	stack *nodeb = new_node(2);
-// 	stack *nodec = new_node(3);
-// 	stack *noded = new_node(4);
-// 	stack *stackb = nodea;
+// 	t_stack *nodea = new_node(1);
+// 	t_stack *nodeb = new_node(2);
+// 	t_stack *nodec = new_node(3);
+// 	t_stack *noded = new_node(4);
+// 	t_stack *stackb = nodea;
 // 	nodea->next = nodeb;
 // 	nodea->prev = NULL;
 // 	nodeb->next = nodec;

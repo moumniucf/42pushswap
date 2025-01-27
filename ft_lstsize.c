@@ -6,14 +6,14 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 12:26:25 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/25 12:26:35 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/27 12:23:16 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "push_swap.h"
 
-int	ft_lstsize(stack *lst)
+int	ft_lstsize(t_stack *lst)
 {
 	int	i;
 

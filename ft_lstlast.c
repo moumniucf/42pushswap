@@ -6,15 +6,15 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 09:58:22 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/21 09:58:42 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/27 12:23:08 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-stack	*ft_lstlast(stack *lst)
+t_stack	*ft_lstlast(t_stack *lst)
 {
-	stack	*last;
+	t_stack	*last;
 
 	if (!lst)
 		return (NULL);
