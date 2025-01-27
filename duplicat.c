@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   duplicat.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/27 12:56:27 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/01/27 13:22:06 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/01/27 19:20:44 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-int main(int ac, char **av)
+
+int ft_isdouble(t_stack *head)
 {
-	// t_stack *a = NULL;
-	// t_stack *b = NULL;
-	(void)ac;
-	int i = 1;
-	char **ptr = ft_split(av[i], ' ');
-	while(*ptr)
-	{
-		printf("%s\n", ptr[i++]);
-		ptr++;
-	}
+	t_stack *rep;
+	
 }
