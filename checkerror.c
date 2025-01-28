@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   checkerror.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/25 12:26:25 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/28 13:30:05 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/01/28 10:03:14 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/01/28 15:22:42 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
-
-int	ft_lstsize(t_stack *lst)
+void	sort_two(t_stack *head)
 {
-	int	i;
-
-	i = 0;
-	while (lst)
+	t_stack *small = small_node(head);
+	int second = (head)->next->data;
+	if (is_sort(head))
+		return ;
+	if ((small->data) == second)
 	{
-		i++;
-		lst = lst->next;
+		sa(&head);
 	}
-	return (i);
 }

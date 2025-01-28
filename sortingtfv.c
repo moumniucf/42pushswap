@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/27 18:27:13 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/28 13:14:19 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,14 @@ void	sortthree(t_stack **head)
 		sa(head);
 		ra(head);
 	}
-	if ((small->data) == second)
+	else if ((small->data) == second)
 	{
 		if (first > last)
 			ra(head);
 		else
 			sa(head);
 	}
-	if ((small->data) == last)
+	else if ((small->data) == last)
 	{
 		if (first < second)
 			rra(head);
@@ -82,14 +82,14 @@ void	sortfour(t_stack **head, t_stack **b)
 		sortthree(head);
 		pa(head, b);
 	}
-	if ((small->data) == second)
+	else if ((small->data) == second)
 	{
 		sa(head);
 		pb(head, b);
 		sortthree(head);
 		pa(head, b);
 	}
-	if ((small->data) == last)
+	else if ((small->data) == last)
 	{
 		rra(head);
 		rra(head);
@@ -97,7 +97,7 @@ void	sortfour(t_stack **head, t_stack **b)
 		sortthree(head);
 		pa(head, b);
 	}
-	if ((small->data) == four)
+	else if ((small->data) == four)
 	{
 		rra(head);
 		pb(head, b);
@@ -127,14 +127,14 @@ void	sortfive(t_stack **head, t_stack **b)
 		sortfour(head, b);
 		pa(head, b);
 	}
-	if ((small->data) == second)
+	else if ((small->data) == second)
 	{
 		sa(head);
 		pb(head, b);
 		sortfour(head, b);
 		pa(head, b);
 	}
-	if ((small->data) == last)
+	else if ((small->data) == last)
 	{
 		ra(head);
 		ra(head);
@@ -142,7 +142,7 @@ void	sortfive(t_stack **head, t_stack **b)
 		sortfour(head, b);
 		pa(head, b);
 	}
-	if ((small->data) == four)
+	else if ((small->data) == four)
 	{
 		rra(head);
 		rra(head);
@@ -150,7 +150,7 @@ void	sortfive(t_stack **head, t_stack **b)
 		sortfour(head, b);
 		pa(head, b);
 	}
-	if ((small->data) == five)
+	else if ((small->data) == five)
 	{
 		rra(head);
 		pb(head, b);
@@ -159,29 +159,22 @@ void	sortfive(t_stack **head, t_stack **b)
 	}
 }
 
-int main()
-{
-	t_stack *node1 = new_node(1);
-	t_stack *node2 = new_node(3);
-	t_stack *node3 = new_node(2);
-	t_stack *node4 = new_node(5);
-	t_stack *node5 = new_node(9);
-	t_stack *head = node1;
-	t_stack *b = malloc(sizeof(t_stack));
-	node1->next = node2;
-	node1->prev = NULL;
-	node2->next = node3;
-	node2->prev = node1;
-	node3->next = node4;
-	node3->prev = node2;
-	node4->prev = node3;
-	node4->next = node5;
-	node5->next = NULL;
-	node5->prev = node4;
-	sortfive(&head, &b);
-	while(head)
-	{
-		printf("%d\n",head->data);
-		head =head->next;
-	}
-}
+// int main()
+// {
+// 	t_stack *node1 = new_node(1);
+// 	t_stack *node2 = new_node(2);
+// 	t_stack *node3 = new_node(3);
+// 	t_stack *head = node1;
+// 	node1->next = node2;
+// 	node1->prev = NULL;
+// 	node2->next = node3;
+// 	node2->prev = node1;
+// 	node3->next = NULL;
+// 	node3->prev = node3;
+// 	sortthree(&head);
+// 	while(head)
+// 	{
+// 		printf("%d\n",head->data);
+// 		head =head->next;
+// 	}
+// }

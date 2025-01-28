@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/27 12:56:07 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/28 15:46:11 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,12 @@ int			ft_isdigit(int c);
 void		ft_lstadd_back(t_stack **lst, t_stack *new);
 int			ft_lstsize(t_stack *lst);
 t_stack		*small_node(t_stack *head);
+void		ft_lstadd_back(t_stack **lst, t_stack *new);
+void		sortfive(t_stack **head, t_stack **b);
+int			ft_isdouble(t_stack *head);
 int			is_sort(t_stack *head);
+void		sort_two(t_stack *head);
+int			ft_iserror(char *str);
 void		sortfour(t_stack **head, t_stack **b);
 void		sortthree(t_stack **head);
 void		sw_ap(t_stack **head);
