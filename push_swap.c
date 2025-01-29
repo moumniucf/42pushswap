@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/29 16:25:16 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/29 17:46:52 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ int main(int ac, char **av)
 			}
 			t_stack *new = new_node(ft_atoi(str[j]));
 			ft_lstadd_back(&stack_a, new);
-			if (!ft_isdouble(stack_a))
-			{
-				write(1, "Error\n", 6);
-				exit(0);
-			}
 			j++;
 		}
 		i++;
+	}
+	if (!ft_isdouble(stack_a))
+	{
+		write(1, "Error\n", 6);
+		exit(0);
 	}
 	t_stack *b = malloc(sizeof(t_stack));
 	if ((ft_lstsize(stack_a)) == 2)
@@ -68,9 +68,9 @@ int main(int ac, char **av)
 	{
 		sortfive(&stack_a, &b);
 	}
-	// while(stack_a)
-	// {
-	// 	printf("--->[%d]\n", stack_a->data);
-	// 	stack_a = stack_a->next;
-	// }
+	while(stack_a)
+	{
+		printf("--->[%d]\n", stack_a->data);
+		stack_a = stack_a->next;
+	}
 }
