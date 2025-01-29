@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/29 13:49:07 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/29 16:25:16 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,6 @@ int main(int ac, char **av)
 	if ((ft_lstsize(stack_a)) == 2)
 	{
 		sort_two(stack_a);
-		// // if ((stack_a->data) > (new->data))
-		// // {
-		// 	sa(&stack_a);
-		// // }
 	}
 	else if ((ft_lstsize(stack_a)) == 3)
 	{
@@ -72,9 +68,9 @@ int main(int ac, char **av)
 	{
 		sortfive(&stack_a, &b);
 	}
-	while(stack_a)
-	{
-		printf("--->[%d]\n", stack_a->data);
-		stack_a = stack_a->next;
-	}
+	// while(stack_a)
+	// {
+	// 	printf("--->[%d]\n", stack_a->data);
+	// 	stack_a = stack_a->next;
+	// }
 }
