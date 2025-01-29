@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/28 13:14:19 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/29 10:25:25 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	sortthree(t_stack **head)
 	small = small_node(*head);
 	if (is_sort(*head))
 		return ;
-	if ((small->data) == first)
+	else if ((small->data) == first)
 	{
 		sa(head);
 		ra(head);
@@ -76,7 +76,7 @@ void	sortfour(t_stack **head, t_stack **b)
 	small = small_node(*head);
 	if (is_sort(*head))
 		return ;
-	if ((small->data) == first)
+	else if ((small->data) == first)
 	{
 		pb(head, b);
 		sortthree(head);
@@ -121,7 +121,7 @@ void	sortfive(t_stack **head, t_stack **b)
 	small = small_node(*head);
 	if (is_sort(*head))
 		return ;
-	if ((small->data) == ((*head)->data))
+	else if ((small->data) == ((*head)->data))
 	{
 		pb(head, b);
 		sortfour(head, b);
@@ -161,9 +161,9 @@ void	sortfive(t_stack **head, t_stack **b)
 
 // int main()
 // {
-// 	t_stack *node1 = new_node(1);
+// 	t_stack *node1 = new_node(3);
 // 	t_stack *node2 = new_node(2);
-// 	t_stack *node3 = new_node(3);
+// 	t_stack *node3 = new_node(1);
 // 	t_stack *head = node1;
 // 	node1->next = node2;
 // 	node1->prev = NULL;

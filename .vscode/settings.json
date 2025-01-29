@@ -18,6 +18,9 @@
 		"type_traits": "c",
 		"vector": "c",
 		"utility": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"array": "c",
+		"string": "c",
+		"string_view": "c"
 	}
 }

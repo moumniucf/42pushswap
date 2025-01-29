@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:22:06 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/28 17:23:23 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/29 10:21:40 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 int ft_isdouble(t_stack *head)
 {
-	t_stack *rep = head;
-	t_stack *second = (rep)->next;
-	while(rep)
+	t_stack *first = head;
+	t_stack *second;
+	while(first)
 	{
+		second = (first)->next;
 		while(second)
 		{
-			if (rep->data == second->data)
+			if (first->data == second->data)
 			{
 				return (0);
 			}
 			second = second->next;
 		}
-		rep = rep->next;
+		first = first->next;
 	}
 	return (1);
 }
@@ -35,9 +36,9 @@ int ft_isdouble(t_stack *head)
 // {
 // 	t_stack *node1 = new_node(2);
 // 	t_stack *node2 = new_node(3);
-// 	t_stack *node3 = new_node(4);
+// 	t_stack *node3 = new_node(8);
 // 	t_stack *node4 = new_node(6);
-// 	t_stack *node5 = new_node(20);
+// 	t_stack *node5 = new_node(6);
 // 	t_stack *head = node1;
 // 	node1->next = node2;
 // 	node1->prev = NULL;
