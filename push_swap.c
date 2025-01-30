@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/29 17:46:52 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/30 18:17:37 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,26 +51,29 @@ int main(int ac, char **av)
 		write(1, "Error\n", 6);
 		exit(0);
 	}
-	t_stack *b = malloc(sizeof(t_stack));
-	if ((ft_lstsize(stack_a)) == 2)
+	if(!is_sort(stack_a))
 	{
-		sort_two(stack_a);
-	}
-	else if ((ft_lstsize(stack_a)) == 3)
-	{
-		sortthree(&stack_a);
-	}
-	else if ((ft_lstsize(stack_a)) == 4)
-	{
-		sortfour(&stack_a, &b);
-	}
-	else if ((ft_lstsize(stack_a)) == 5)
-	{
-		sortfive(&stack_a, &b);
-	}
-	while(stack_a)
-	{
-		printf("--->[%d]\n", stack_a->data);
-		stack_a = stack_a->next;
+		t_stack *b = malloc(sizeof(t_stack));
+		if ((ft_lstsize(stack_a)) == 2)
+		{
+			sa(&stack_a);
+		}
+		else if ((ft_lstsize(stack_a)) == 3)
+		{
+			sortthree(&stack_a);
+		}
+		else if ((ft_lstsize(stack_a)) == 4)
+		{
+			sortfour(&stack_a, &b);
+		}
+		else if ((ft_lstsize(stack_a)) == 5)
+		{
+			sortfive(&stack_a, &b);
+		}
+		while(stack_a)
+		{
+			printf("--->[%d]\n", stack_a->data);
+			stack_a = stack_a->next;
+		}
 	}
 }

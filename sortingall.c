@@ -6,8 +6,9 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:08:04 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/28 13:08:14 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/30 14:32:04 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <tgmath.h>
