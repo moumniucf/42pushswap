@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/29 10:25:25 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/31 16:29:32 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,10 @@ void	sortthree(t_stack **head)
 	{
 		if (first < second)
 			rra(head);
-		else
+		else {
 			ra(head);
-		sa(head);
+			sa(head);
+		}
 	}
 }
 

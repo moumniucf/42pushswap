@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/27 12:51:36 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/31 16:10:17 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_stack	*new_node(int value)
 
 int	is_sort(t_stack *head)
 {
+	if (!head)
+		printf("dfffffffsssssssf\n");
 	while (head->next)
 	{
 		if ((head->data) > ((head->next->data)))

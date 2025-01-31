@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:38:23 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/27 12:22:58 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/01/31 16:22:12 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void	ft_lstadd_back(t_stack **lst, t_stack *new)
 	{
 		last = ft_lstlast(*lst);
 		last->next = new;
+		new->prev = last;
 	}
 }
