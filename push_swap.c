@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/31 16:42:24 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 12:43:29 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,10 @@ int main(int ac, char **av)
 		{
 			sortfive(&a, &b);
 		}
-		// else 
-		// {
+	// 	else
+	// 	{
 
-		// }
+	// 	}
 	}
 	t_stack *tmp = a;
 	while(tmp){

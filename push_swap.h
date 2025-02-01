@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/31 13:21:18 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 12:37:51 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ void		ft_lstadd_back(t_stack **lst, t_stack *new);
 void		sortfive(t_stack **head, t_stack **b);
 int			ft_isdouble(t_stack *head);
 int			is_sort(t_stack *head);
-void		sort_two(t_stack *head);
-int			ft_iserror(char *str);
 void		sortfour(t_stack **head, t_stack **b);
 void		sortthree(t_stack **head);
 void		sw_ap(t_stack **head);
@@ -56,6 +54,7 @@ void		rrb(t_stack **b);
 void		rrr(t_stack **a, t_stack **b);
 void		pa(t_stack **a, t_stack **b);
 void		pb(t_stack **a, t_stack **b);
-void	swap_a_b(t_stack **head);
-void	s_a(t_stack **a);
+void		free_stack(t_stack **head);
+int			set_chunks(t_stack *head);
+void chunk_sorting(t_stack **a, t_stack **b);
 #endif
