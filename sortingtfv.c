@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/31 16:29:32 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 13:18:29 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,7 @@ void	sortthree(t_stack **head)
 	second = (*head)->next->data;
 	last = (*head)->next->next->data;
 	small = small_node(*head);
-	if (is_sort(*head))
-		return ;
-	else if ((small->data) == first)
+	if ((small->data) == first)
 	{
 		sa(head);
 		ra(head);
@@ -75,9 +73,7 @@ void	sortfour(t_stack **head, t_stack **b)
 	last = (*head)->next->next->data;
 	four = (*head)->next->next->next->data;
 	small = small_node(*head);
-	if (is_sort(*head))
-		return ;
-	else if ((small->data) == first)
+	if ((small->data) == first)
 	{
 		pb(head, b);
 		sortthree(head);
@@ -120,9 +116,7 @@ void	sortfive(t_stack **head, t_stack **b)
 	four = (*head)->next->next->next->data;
 	five = (*head)->next->next->next->next->data;
 	small = small_node(*head);
-	if (is_sort(*head))
-		return ;
-	else if ((small->data) == ((*head)->data))
+	if ((small->data) == ((*head)->data))
 	{
 		pb(head, b);
 		sortfour(head, b);

@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 12:43:29 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 15:30:18 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ int main(int ac, char **av)
 {
 	// atexit(leaks);
 	t_stack *a = NULL;
+	// t_stack *b = NULL;
 	if (ac == 1 || !av[1][0])
-		return (0);
+		exit (0);
 	int i = 1;
 	while(i < ac)
 	{
@@ -59,7 +60,7 @@ int main(int ac, char **av)
 	}
 	if(!is_sort(a))
 	{
-		t_stack *b = malloc(sizeof(t_stack));
+		t_stack *tmp = malloc(sizeof(t_stack));
 		if ((ft_lstsize(a)) == 2)
 		{
 			sa(&a);
@@ -70,18 +71,16 @@ int main(int ac, char **av)
 		}
 		else if ((ft_lstsize(a)) == 4)
 		{
-			sortfour(&a, &b);
+			sortfour(&a, &tmp);
 		}
 		else if ((ft_lstsize(a)) == 5)
 		{
-			sortfive(&a, &b);
+			sortfive(&a, &tmp);
 		}
-	// 	else
-	// 	{
-
-	// 	}
 	}
 	t_stack *tmp = a;
+	t_stack *help = medium_node(a);
+	printf("//////%d\n", help->data);
 	while(tmp){
 		printf("===>[%d]\n", tmp->data);
 		tmp = tmp->next;

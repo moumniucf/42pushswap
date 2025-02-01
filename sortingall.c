@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:08:04 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 12:38:49 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 15:02:30 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,6 @@ int	set_chunks(t_stack *head)
 		return (150);
 }
 
-void chunk_sorting(t_stack **a, t_stack **b)
-{
-	// int len = ft_lstsize(*a);  // Jib size dial stack
-	int chunk_size = set_chunks(*a);  // Jib chunk size
-	int count = 1;  // Ch7al mn chunk pushina
-
-	while (*a) // Push mn `A` l `B`
-	{
-		if ((*a)->data <= count * chunk_size) // Wach ndir push l chunk l b?
-		{
-			pb(a, b); // Push l chunk l `B`
-			count++;
-		}
-		else
-			ra(a); // Rotate ida ma kaynch fi chunk
-	}
-
-	while (*b) // Merge chunks mn `B` l `A`
-		pa(a, b); // Push mn `B` l `A`
-}
 
 // int main()
 // {

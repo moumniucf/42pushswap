@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 12:37:51 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 15:27:07 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,19 @@ typedef struct s_stack
 
 t_stack		*new_node(int value);
 t_stack		*ft_lstlast(t_stack *lst);
+t_stack		*medium_node(t_stack *head);
+t_stack		*small_node(t_stack *head);
 int			ft_atoi(const char *str);
+int			ft_isdigit(int c);
+int			ft_lstsize(t_stack *lst);
+int			ft_isdouble(t_stack *head);
+int			set_chunks(t_stack *head);
+int			is_sort(t_stack *head);
 char		**ft_split(char const *s, char c);
 void		*freefun(char **s);
-int			ft_isdigit(int c);
 void		ft_lstadd_back(t_stack **lst, t_stack *new);
-int			ft_lstsize(t_stack *lst);
-t_stack		*small_node(t_stack *head);
 void		ft_lstadd_back(t_stack **lst, t_stack *new);
 void		sortfive(t_stack **head, t_stack **b);
-int			ft_isdouble(t_stack *head);
-int			is_sort(t_stack *head);
 void		sortfour(t_stack **head, t_stack **b);
 void		sortthree(t_stack **head);
 void		sw_ap(t_stack **head);
@@ -55,6 +57,4 @@ void		rrr(t_stack **a, t_stack **b);
 void		pa(t_stack **a, t_stack **b);
 void		pb(t_stack **a, t_stack **b);
 void		free_stack(t_stack **head);
-int			set_chunks(t_stack *head);
-void chunk_sorting(t_stack **a, t_stack **b);
 #endif
