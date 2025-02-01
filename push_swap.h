@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 15:27:07 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 18:03:56 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct s_stack
 {
 	int				data;
+	int index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
@@ -29,6 +30,7 @@ t_stack		*new_node(int value);
 t_stack		*ft_lstlast(t_stack *lst);
 t_stack		*medium_node(t_stack *head);
 t_stack		*small_node(t_stack *head);
+t_stack		*big_node(t_stack *head);
 int			ft_atoi(const char *str);
 int			ft_isdigit(int c);
 int			ft_lstsize(t_stack *lst);

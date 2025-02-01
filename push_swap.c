@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 15:30:18 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/01 18:04:34 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,6 @@ int main(int ac, char **av)
 		}
 	}
 	t_stack *tmp = a;
-	t_stack *help = medium_node(a);
-	printf("//////%d\n", help->data);
 	while(tmp){
 		printf("===>[%d]\n", tmp->data);
 		tmp = tmp->next;
