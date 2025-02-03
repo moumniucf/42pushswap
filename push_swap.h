@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 18:03:56 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 11:41:37 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 typedef struct s_stack
 {
 	int				data;
-	int index;
+	int				index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
@@ -35,7 +35,7 @@ int			ft_atoi(const char *str);
 int			ft_isdigit(int c);
 int			ft_lstsize(t_stack *lst);
 int			ft_isdouble(t_stack *head);
-int			set_chunks(t_stack *head);
+int			set_chunks(int len);
 int			is_sort(t_stack *head);
 char		**ft_split(char const *s, char c);
 void		*freefun(char **s);
@@ -59,4 +59,5 @@ void		rrr(t_stack **a, t_stack **b);
 void		pa(t_stack **a, t_stack **b);
 void		pb(t_stack **a, t_stack **b);
 void		free_stack(t_stack **head);
+void chunk_sorting(t_stack **a, t_stack **b);
 #endif

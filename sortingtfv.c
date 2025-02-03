@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 13:18:29 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 12:09:15 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,11 @@ void	sortthree(t_stack **head)
 	small = small_node(*head);
 	if ((small->data) == first)
 	{
-		sa(head);
-		ra(head);
+		if (second > last)
+		{
+			sa(head);
+			ra(head);
+		}
 	}
 	else if ((small->data) == second)
 	{

@@ -6,19 +6,15 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:08:04 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/01 18:50:51 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 13:11:55 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <math.h>
-int	stack_size(t_stack *head)
+
+int	set_chunks(int len)
 {
-	return (ft_lstsize(head));
-}
-int	set_chunks(t_stack *head)
-{
-	int len = ft_lstsize(head);
 	if (len <= 100)
 		return (15);
 	else if (len <= 500)
@@ -30,26 +26,31 @@ int	set_chunks(t_stack *head)
 	else 
 		return (150);
 }
-void	big_sort(t_stack **head, t_stack **b)
+
+void	to_b(t_stack **a, t_stack **b)
 {
-	t_stack *med = medium_node(*head);
-	t_stack *lst = ft_lstlast(*head);
-	t_stack *small = small_node(*head);
-	int first = (*head)->data;
-	int meduim = (med)->data;
-	int last = lst->data;
-	int tmp = (*head)->data;
-	while((*head)->next)
+	int len = ft_lstsize(*a);
+	int chunks = set_chunks(len);
+	int i = 1;
+	while(ft_lstsize(*a))
 	{
-		if (first == (small->data))
+		if ((*a)->index < chunks + i)
 		{
-			pb(head, b);
+			pb(a, b);
+			if((*b)->index < i)
+				rb(b);
+			i++;
 		}
-		(*head) = (*head)->next;
+		else
+			ra(a);
+		if (ft_lstsize(*b) > 1 && ((*b)->data < (*b)->next->data))
+			sb(b);
 	}
 }
-
-
+void	sort_all(t_stack **a, t_stack **b)
+{
+	
+}
 int main()
 {
 	t_stack *b = malloc(sizeof(t_stack));
@@ -81,7 +82,7 @@ int main()
 	node8->prev = node7;
 	node9->next = NULL;
 	node9->prev = node8;
-	big_sort(&head, &b);
+	to_b(&head, &b);
 	while(head)
 	{
 		printf("%d\n", head->data);

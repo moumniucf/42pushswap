@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 10:21:15 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/31 16:02:19 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 10:45:08 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	pa(t_stack **a, t_stack **b)
 	write(1, "pa\n", 3);
 }
 
+
 void	pb(t_stack **a, t_stack **b)
 {
 	t_stack	*top_a;
@@ -35,8 +36,8 @@ void	pb(t_stack **a, t_stack **b)
 	if (!(*a))
 		return ;
 	top_a = (*a);
-	if ((*a)->next)
-		(*a)->next->prev = NULL;
+	if ((*a))
+		(*a)->prev = NULL;
 	(*a) = top_a->next;
 	(*b)->prev = (*a);
 	top_a->next = (*b);
@@ -72,7 +73,7 @@ void	pb(t_stack **a, t_stack **b)
 // 	nodec->prev = nodeb;
 // 	noded->next = NULL;
 // 	noded->prev = nodec;
-// 	pb(&stacka, &stackb);
+// 	pa(&stacka, &stackb);
 // 	while(stacka)
 // 	{
 // 		printf("|%d|\n", stacka->data);
