@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:08:04 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 13:11:55 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 19:07:07 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,16 @@ int	set_chunks(int len)
 
 void	to_b(t_stack **a, t_stack **b)
 {
+	//index kanmchiw bih mn sghir lkbir 
 	int len = ft_lstsize(*a);
 	int chunks = set_chunks(len);
 	int i = 1;
 	while(ft_lstsize(*a))
 	{
-		if ((*a)->index < chunks + i)
+		if ((*a)->index1 < chunks + i)
 		{
 			pb(a, b);
-			if((*b)->index < i)
+			if((*b)->index1 < i)
 				rb(b);
 			i++;
 		}
@@ -47,9 +48,14 @@ void	to_b(t_stack **a, t_stack **b)
 			sb(b);
 	}
 }
+
 void	sort_all(t_stack **a, t_stack **b)
 {
-	
+	to_b(a, b);
+	while(ft_lstsize(*b))
+	{
+		pa(a, b);
+	}
 }
 int main()
 {
@@ -83,9 +89,10 @@ int main()
 	node9->next = NULL;
 	node9->prev = node8;
 	to_b(&head, &b);
-	while(head)
+	// sort_all(&head, &b);
+	while(b)
 	{
-		printf("%d\n", head->data);
-		head = head->next;
+		printf("\033[0;34m%d\033[0;34m\n" , b->data);
+		b = b->next;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 11:41:37 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 19:05:26 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 typedef struct s_stack
 {
 	int				data;
-	int				index;
+	int				index1;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
@@ -59,5 +59,5 @@ void		rrr(t_stack **a, t_stack **b);
 void		pa(t_stack **a, t_stack **b);
 void		pb(t_stack **a, t_stack **b);
 void		free_stack(t_stack **head);
-void chunk_sorting(t_stack **a, t_stack **b);
+void	sort_all(t_stack **a, t_stack **b);
 #endif

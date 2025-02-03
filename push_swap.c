@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 12:08:42 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/03 17:56:16 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,11 @@ int main(int ac, char **av)
 		}
 		i++;
 	}
+	//long n = ft_atoi(av[i]);
+	// if (n >= INT_MIN)
+	// {
+	// 	write(1, "Error\n", 6);
+	// }
 	if (!ft_isdouble(a))
 	{
 		write(1, "Error\n", 6);
@@ -77,6 +82,10 @@ int main(int ac, char **av)
 		{
 			sortfive(&a, &tmp);
 		}
+		// else
+		// {
+		// 	sort_all(&a, &b);
+		// }
 	}
 	t_stack *tmp = a;
 	while(tmp){

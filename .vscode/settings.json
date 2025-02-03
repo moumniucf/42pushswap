@@ -21,6 +21,10 @@
 		"push_swap.h": "c",
 		"array": "c",
 		"string": "c",
-		"string_view": "c"
+		"string_view": "c",
+		"deque": "c",
+		"filesystem": "c",
+		"random": "c",
+		"regex": "c"
 	}
 }
