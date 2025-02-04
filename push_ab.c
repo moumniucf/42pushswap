@@ -6,26 +6,48 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 10:21:15 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 10:45:08 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/04 17:29:11 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stack **a, t_stack **b)
-{
-	t_stack	*top_b;
+// void	pa(t_stack **a, t_stack **b)
+// {
+// 	t_stack	*top_b;
 
-	if (!(*b))
-		return ;
-	top_b = *b;
-	if ((*b)->next)
-		(*b)->next->prev = NULL;
-	(*b) = top_b->next;
-	(*a)->prev = top_b;
-	top_b->next = (*a);
-	(*a) = top_b;
-	write(1, "pa\n", 3);
+// 	if (!(*b))
+// 		return ;
+// 	top_b = *b;
+// 	if ((*b)->next)
+// 		(*b)->next->prev = NULL;
+// 	(*b) = top_b->next;
+// 	(*a)->prev = top_b;
+// 	top_b->next = (*a);
+// 	(*a) = top_b;
+// 	write(1, "pa\n", 3);
+// }
+void pa(t_stack **stackA, t_stack **stackB)
+{
+    t_stack *tmp;
+
+    if (!stackB || !(*stackB)) // Check wach stackB khawi
+    {
+        printf("pa(): stackB is empty, cannot proceed\n");
+        return;
+    }
+
+    tmp = *stackB; // Khzna l'node li ghan7ydo
+    *stackB = (*stackB)->next; // 9demna f stackB
+
+    if (*stackB)
+        (*stackB)->prev = NULL; // Kayna doubly linked list, khasna ndiro prev NULL
+
+    tmp->next = *stackA; // Li kan f stackA, nswlo f tmp->next
+    if (*stackA)
+        (*stackA)->prev = tmp;
+
+    *stackA = tmp; // Dirna l'ajout f stackA
 }
 
 
@@ -39,9 +61,16 @@ void	pb(t_stack **a, t_stack **b)
 	if ((*a))
 		(*a)->prev = NULL;
 	(*a) = top_a->next;
-	(*b)->prev = (*a);
-	top_a->next = (*b);
-	(*b) = top_a;
+	if (*b)
+	{
+		(*b)->prev = (*a);
+		top_a->next = (*b);
+		(*b) = top_a;
+	} else {
+		top_a->next = NULL;
+		top_a->prev = NULL;
+		(*b) = top_a;
+	}
 	write(1, "pb\n", 3);
 }
 

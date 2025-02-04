@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 09:58:22 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 12:59:38 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/04 15:28:04 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,11 @@
 
 t_stack	*ft_lstlast(t_stack *lst)
 {
-	t_stack	*last;
-
 	if (!lst)
 		return (NULL);
-	while (lst)
+	while (lst->next)
 	{
-		if (!lst->next)
-		{
-			last = lst;
-		}
 		lst = lst->next;
 	}
-	return (last);
+	return (lst);
 }

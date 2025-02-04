@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 19:05:26 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/04 17:30:57 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdbool.h>
 
 typedef struct s_stack
 {
 	int				data;
-	int				index1;
+	int				index;
+	int				above_median;
+	int				current_pos;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
@@ -59,5 +62,9 @@ void		rrr(t_stack **a, t_stack **b);
 void		pa(t_stack **a, t_stack **b);
 void		pb(t_stack **a, t_stack **b);
 void		free_stack(t_stack **head);
-void	sort_all(t_stack **a, t_stack **b);
+void		to_b(t_stack **a, t_stack **b);
+void		index_stack(t_stack *head);
+void		set_position(t_stack *head);
+void		sort_all(t_stack **a, t_stack **b);
+void		rotate_stack_b(t_stack **b, t_stack *node);
 #endif
