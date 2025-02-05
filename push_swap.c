@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 18:32:39 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 19:07:42 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int main(int ac, char **av)
 		write(1, "Error\n", 6);
 		exit(1);
 	}
-	if (is_b_sort(a))
+	if (is_b_sort(a) && ft_lstsize(a) > 5)
 	{
 		// printf("BACKWORD \n");
 		while(ft_lstsize(a))
@@ -78,7 +78,7 @@ int main(int ac, char **av)
 		}
 		exit(1);
 	}
-	if(!is_sort(a) && !is_b_sort(a))
+	if(!is_sort(a))
 	{
 		index_stack(a);
 		t_stack *tmp = malloc(sizeof(t_stack));
