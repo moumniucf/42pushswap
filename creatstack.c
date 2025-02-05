@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 10:59:51 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 18:19:41 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,19 @@ int	is_sort(t_stack *head)
 	while (head->next)
 	{
 		if ((head->data) > ((head->next->data)))
+			return (0);
+		head = head->next;
+	}
+	return (1);
+}
+
+int	is_b_sort(t_stack *head)
+{
+	if (!head)
+		return (0);
+	while (head->next)
+	{
+		if ((head->data) < ((head->next->data)))
 			return (0);
 		head = head->next;
 	}

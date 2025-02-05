@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 16:49:09 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 18:32:39 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int main(int ac, char **av)
 		}
 		i++;
 	}
-	// long n = ft_atoi(av[i]);
+	// long n = 8888888888888;
 	// if (n > INT_MIN)
 	// {
 	// 	write(1, "Error\n", 6);
@@ -63,7 +63,22 @@ int main(int ac, char **av)
 		write(1, "Error\n", 6);
 		exit(1);
 	}
-	if(!is_sort(a))
+	if (is_b_sort(a))
+	{
+		// printf("BACKWORD \n");
+		while(ft_lstsize(a))
+		{
+			pb(&a, &b);
+			rrb(&b);
+			// rotate_stack_b(&b, big_node(b));
+		}
+		while(ft_lstsize(b))
+		{
+			pa(&a, &b);
+		}
+		exit(1);
+	}
+	if(!is_sort(a) && !is_b_sort(a))
 	{
 		index_stack(a);
 		t_stack *tmp = malloc(sizeof(t_stack));
@@ -86,21 +101,19 @@ int main(int ac, char **av)
 		else
 		{
 			sort_all(&a, &b);
-			// to_b(&a, &b);
-			// pa(&a, &b);
 		}
 	}
-	// t_stack *tmp1 = a;
-	// tmp1 = a;
-	// while(tmp1)
+	t_stack *tmp1 = a;
+	tmp1 = a;
+	while(tmp1)
+	{
+		printf("%d ", tmp1->data);
+		tmp1 = tmp1->next;
+	}
+	// t_stack *tmp2 = b;
+	// while(tmp2)
 	// {
-	// 	printf("%d ", tmp1->data);
-	// 	tmp1 = tmp1->next;
+	// 	printf("%d ", tmp2->data);
+	// 	tmp2 = tmp2->next;
 	// }
-	// // t_stack *tmp2 = b;
-	// // while(tmp2)
-	// // {
-	// // 	printf("%d ", tmp2->data);
-	// // 	tmp2 = tmp2->next;
-	// // }
 }

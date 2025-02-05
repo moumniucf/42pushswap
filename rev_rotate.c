@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 17:03:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 16:47:06 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 18:08:24 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 void	rev_rotate(t_stack **head)
 {
 	t_stack	*last;
-	// if (!(*head) || !(*head)->next)
-	// 	return ;
+	if (!(*head) || !(*head)->next)
+		return ;
 	last = ft_lstlast(*head);
-	last->prev->next = NULL;
+	if (last->prev)
+		last->prev->next = NULL;
 	last->next = (*head);
 	last->prev = NULL;
+	(*head)->prev = last;
 	(*head) = last;
 }
 
@@ -33,7 +35,7 @@ void	rra(t_stack **a)
 void	rrb(t_stack **b)
 {
 	rev_rotate(b);
-	write(1, "rrb\n", 3);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack **a, t_stack **b)

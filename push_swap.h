@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 14:27:44 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 18:19:57 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int			ft_lstsize(t_stack *lst);
 int			ft_isdouble(t_stack *head);
 int			set_chunks(int len);
 int			is_sort(t_stack *head);
+int			is_b_sort(t_stack *head);
 char		**ft_split(char const *s, char c);
 void		*freefun(char **s);
 void		ft_lstadd_back(t_stack **lst, t_stack *new);
