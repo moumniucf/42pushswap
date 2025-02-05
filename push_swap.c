@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/04 19:01:04 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 10:09:18 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,12 @@ int main(int ac, char **av)
 	// {
 	// 	write(1, "Error\n", 6);
 	// }
+	index_stack(a);
 	if (!ft_isdouble(a))
 	{
 		write(1, "Error\n", 6);
 		exit(1);
 	}
-	index_stack(a);
 	if(!is_sort(a))
 	{
 		t_stack *tmp = malloc(sizeof(t_stack));
@@ -88,11 +88,11 @@ int main(int ac, char **av)
 			sort_all(&a, &b);
 		}
 	}
-	// t_stack *tmp1 = a;
-	// tmp1 = a;
-	// while(tmp1)
-	// {
-	// 	printf("%d ", tmp1->data);
-	// 	tmp1 = tmp1->next;
-	// }
+	t_stack *tmp1 = a;
+	tmp1 = a;
+	while(tmp1)
+	{
+		printf("%d ", tmp1->data);
+		tmp1 = tmp1->next;
+	}
 }

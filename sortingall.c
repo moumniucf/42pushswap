@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 13:08:04 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/04 18:59:21 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 10:12:28 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	to_b(t_stack **a, t_stack **b)
 		if ((*a)->index < chunks + i)
 		{
 			pb(a, b);
-			if (*b && (*b)->index < i)
+			if ((*b)->index < i)
 				rb(b);
 			i++;
 		} 
