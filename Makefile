@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -Werror
 HEADER = push_swap.h
 
 SRCS = creatstack.c push_swap.c swapab.c ft_lstlast.c ft_split.c  push_ab.c rotateab.c rev_rotate.c ft_atoi.c\
-sortingtfv.c parss.c ft_isdigit.c ft_lstsize.c ft_lstadd_back.c checkerror.c duplicat.c sortingall.c 
+sortingtfv.c parss.c ft_isdigit.c ft_lstsize.c ft_lstadd_back.c checkerror.c duplicat.c sortingall.c stacksort.c
 
 OBJS = $(SRCS:%.c=%.o)
 

@@ -6,20 +6,22 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:22:06 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/29 10:21:40 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 11:01:02 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_isdouble(t_stack *head)
+int	ft_isdouble(t_stack *head)
 {
-	t_stack *first = head;
-	t_stack *second;
-	while(first)
+	t_stack	*first;
+	t_stack	*second;
+
+	first = head;
+	while (first)
 	{
 		second = (first)->next;
-		while(second)
+		while (second)
 		{
 			if (first->data == second->data)
 			{

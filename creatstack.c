@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/04 18:48:59 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 10:59:51 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,17 @@ int	is_sort(t_stack *head)
 	}
 	return (1);
 }
+
 void	index_stack(t_stack *head)
 {
-	t_stack *tmp = head;
-	t_stack *second;
-	while(tmp->next)
+	t_stack	*tmp;
+	t_stack	*second;
+
+	tmp = head;
+	while (tmp->next)
 	{
 		second = tmp->next;
-		while(second)
+		while (second)
 		{
 			if ((tmp->data) > (second->data))
 				tmp->index++;
@@ -57,42 +60,23 @@ void	index_stack(t_stack *head)
 	}
 }
 
-t_stack	*last_node(t_stack *head)
-{
-	while(head->next)
-	{
-		head = head->next;
-	}
-	return (head);
-}
-t_stack *first_node(t_stack *head)
-{
-	t_stack *tmp;
-	while(head)
-	{
-		if (head->prev == NULL)
-		{
-			tmp = head;
-		}
-		head = head->next;
-	}
-	return (tmp);
-}
-
 void	set_position(t_stack *head)
 {
-	int mid  = ft_lstsize(head) / 2;
-	int i = 0;
-	while(head)
+	int	mid;
+	int	i;
+
+	mid = ft_lstsize(head) / 2;
+	i = 0;
+	while (head)
 	{
 		head->current_pos = i;
 		head->index = 0;
-		if (i <= mid)
-			head->above_median = 1;
-		else
+		if (i > mid)
 			head->above_median = 0;
+		else
+			head->above_median = 1;
 		head = head->next;
-		// i++;
+		i++;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 10:09:18 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 16:49:09 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int ac, char **av)
 	t_stack *a = NULL;
 	t_stack *b = NULL;
 	if (ac == 1 || !av[1][0])
-		exit (0);
+		exit (1);
 	int i = 1;
 	while(i < ac)
 	{
@@ -53,12 +53,11 @@ int main(int ac, char **av)
 		}
 		i++;
 	}
-	//long n = ft_atoi(av[i]);
-	// if (n >= INT_MIN)
+	// long n = ft_atoi(av[i]);
+	// if (n > INT_MIN)
 	// {
 	// 	write(1, "Error\n", 6);
 	// }
-	index_stack(a);
 	if (!ft_isdouble(a))
 	{
 		write(1, "Error\n", 6);
@@ -66,6 +65,7 @@ int main(int ac, char **av)
 	}
 	if(!is_sort(a))
 	{
+		index_stack(a);
 		t_stack *tmp = malloc(sizeof(t_stack));
 		if ((ft_lstsize(a)) == 2)
 		{
@@ -86,13 +86,21 @@ int main(int ac, char **av)
 		else
 		{
 			sort_all(&a, &b);
+			// to_b(&a, &b);
+			// pa(&a, &b);
 		}
 	}
-	t_stack *tmp1 = a;
-	tmp1 = a;
-	while(tmp1)
-	{
-		printf("%d ", tmp1->data);
-		tmp1 = tmp1->next;
-	}
+	// t_stack *tmp1 = a;
+	// tmp1 = a;
+	// while(tmp1)
+	// {
+	// 	printf("%d ", tmp1->data);
+	// 	tmp1 = tmp1->next;
+	// }
+	// // t_stack *tmp2 = b;
+	// // while(tmp2)
+	// // {
+	// // 	printf("%d ", tmp2->data);
+	// // 	tmp2 = tmp2->next;
+	// // }
 }

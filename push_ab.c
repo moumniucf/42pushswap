@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 10:21:15 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/04 17:29:11 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 16:45:18 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,35 +19,40 @@
 // 	if (!(*b))
 // 		return ;
 // 	top_b = *b;
-// 	if ((*b)->next)
-// 		(*b)->next->prev = NULL;
+// 	*b = top_b->next;
+// 	if ((*b))
+// 		(*b)->prev = NULL;
 // 	(*b) = top_b->next;
-// 	(*a)->prev = top_b;
-// 	top_b->next = (*a);
-// 	(*a) = top_b;
+// 	if ((*b))
+// 	{
+// 		(*a)->prev = (*b);
+// 		top_b->next = (*a);
+// 		(*a) = top_b;
+// 	}
+// 	else
+// 	{
+// 		top_b->next = NULL;
+// 		top_b->prev = NULL;
+// 		(*a) = top_b;
+// 	}
 // 	write(1, "pa\n", 3);
 // }
-void pa(t_stack **stackA, t_stack **stackB)
+void pa(t_stack **a, t_stack **b)
 {
-    t_stack *tmp;
+	t_stack *top_b;
 
-    if (!stackB || !(*stackB)) // Check wach stackB khawi
-    {
-        printf("pa(): stackB is empty, cannot proceed\n");
-        return;
-    }
+	if (!(*b)) // B7al li kayn ghir empty stack
+		return ;
 
-    tmp = *stackB; // Khzna l'node li ghan7ydo
-    *stackB = (*stackB)->next; // 9demna f stackB
-
-    if (*stackB)
-        (*stackB)->prev = NULL; // Kayna doubly linked list, khasna ndiro prev NULL
-
-    tmp->next = *stackA; // Li kan f stackA, nswlo f tmp->next
-    if (*stackA)
-        (*stackA)->prev = tmp;
-
-    *stackA = tmp; // Dirna l'ajout f stackA
+	top_b = *b;
+	*b = top_b->next; // T7it mn b
+	if (*b)
+		(*b)->prev = NULL; // Khdem sa7i7 ila fi b
+	top_b->next = (*a); // T7it fi stack a
+	if (*a)
+		(*a)->prev = top_b;
+	(*a) = top_b;  // Ajli l9a7 fi a
+	write(1, "pa\n", 3);
 }
 
 

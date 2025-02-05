@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/03 12:09:15 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/05 12:02:39 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ void	sortthree(t_stack **head)
 	{
 		if (first < second)
 			rra(head);
-		else {
+		else
+		{
 			ra(head);
 			sa(head);
 		}
@@ -156,23 +157,3 @@ void	sortfive(t_stack **head, t_stack **b)
 		pa(head, b);
 	}
 }
-
-// int main()
-// {
-// 	t_stack *node1 = new_node(3);
-// 	t_stack *node2 = new_node(2);
-// 	t_stack *node3 = new_node(1);
-// 	t_stack *head = node1;
-// 	node1->next = node2;
-// 	node1->prev = NULL;
-// 	node2->next = node3;
-// 	node2->prev = node1;
-// 	node3->next = NULL;
-// 	node3->prev = node3;
-// 	sortthree(&head);
-// 	while(head)
-// 	{
-// 		printf("%d\n",head->data);
-// 		head =head->next;
-// 	}
-// }
