@@ -6,14 +6,19 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/06 15:16:25 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 15:57:08 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	leaks()
+{
+	system("leaks push_swap");
+}
 int	main(int ac, char **av)
 {
+	atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;
@@ -98,4 +103,5 @@ int	main(int ac, char **av)
 			sort_all(&a, &b);
 		}
 	}
+	free_stack(&a);
 }

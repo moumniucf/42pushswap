@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/06 15:16:19 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 16:06:15 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,5 @@ void		index_stack(t_stack *head);
 void		set_position(t_stack *head);
 void		sort_all(t_stack **a, t_stack **b);
 void		rotate_stack_b(t_stack **b, t_stack *node);
+void		free_stacks(t_stack **a, t_stack **b);
 #endif

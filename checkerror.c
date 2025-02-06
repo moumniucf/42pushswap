@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 10:03:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 10:56:40 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 16:06:07 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,24 @@
 void	free_stack(t_stack **head)
 {
 	t_stack	*tmp;
+	t_stack *help;
 
-	while (*head)
+	if (head == NULL)
+		return ;
+	help = *head;
+	while (help)
 	{
-		tmp = (*head)->next;
-		free(*head);
-		*head = tmp;
+		tmp = (help)->next;
+		free(help);
+		help = tmp;
 	}
 	head = NULL;
+}
+
+void	free_stacks(t_stack **a, t_stack **b)
+{
+	free_stack(a);
+	free_stack(b);
 }
 
 t_stack	*medium(t_stack *head)
