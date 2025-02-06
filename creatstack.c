@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/05 18:19:41 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 11:33:39 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ void	index_stack(t_stack *head)
 	t_stack	*tmp;
 	t_stack	*second;
 
+	if (!head)
+		return ;
 	tmp = head;
 	while (tmp->next)
 	{
@@ -83,7 +85,6 @@ void	set_position(t_stack *head)
 	while (head)
 	{
 		head->current_pos = i;
-		head->index = 0;
 		if (i > mid)
 			head->above_median = 0;
 		else
