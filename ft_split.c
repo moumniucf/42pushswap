@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:42:50 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/01/19 16:53:17 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:07:55 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ void	*freefun(char **s)
 {
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

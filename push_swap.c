@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/06 15:57:08 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:34:19 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	leaks()
 }
 int	main(int ac, char **av)
 {
-	atexit(leaks);
+	// atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;
@@ -32,6 +32,11 @@ int	main(int ac, char **av)
 	if (ac == 1 || !av[1][0])
 		exit (1);
 	i = 1;
+	if (is_empty_or_spaces(av[1]) || !is_error_index(av[1]))
+	{
+		write(1, "Error\n", 6);
+		exit(0);
+	}
 	while (i < ac)
 	{
 		str = ft_split(av[i], ' ');
@@ -103,5 +108,5 @@ int	main(int ac, char **av)
 			sort_all(&a, &b);
 		}
 	}
-	free_stack(&a);
+	free_stacks(&a, &b);
 }

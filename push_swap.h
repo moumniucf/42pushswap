@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/06 16:06:15 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/06 18:19:50 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int			set_chunks(int len);
 int			is_sort(t_stack *head);
 int			is_b_sort(t_stack *head);
 char		**ft_split(char const *s, char c);
-void		*freefun(char **s);
 void		ft_lstadd_back(t_stack **lst, t_stack *new);
 void		ft_lstadd_back(t_stack **lst, t_stack *new);
 void		sortfive(t_stack **head, t_stack **b);
@@ -62,11 +61,14 @@ void		rrb(t_stack **b);
 void		rrr(t_stack **a, t_stack **b);
 void		pa(t_stack **a, t_stack **b);
 void		pb(t_stack **a, t_stack **b);
-void		free_stack(t_stack **head);
 void		to_b(t_stack **a, t_stack **b);
 void		index_stack(t_stack *head);
 void		set_position(t_stack *head);
 void		sort_all(t_stack **a, t_stack **b);
 void		rotate_stack_b(t_stack **b, t_stack *node);
+void		free_stack(t_stack **head);
+void		*freefun(char **s);
 void		free_stacks(t_stack **a, t_stack **b);
+int			is_empty_or_spaces(char *str);
+int	is_error_index(char *str);
 #endif
