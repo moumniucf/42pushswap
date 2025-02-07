@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/06 18:19:50 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/07 15:12:07 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,5 +70,8 @@ void		free_stack(t_stack **head);
 void		*freefun(char **s);
 void		free_stacks(t_stack **a, t_stack **b);
 int			is_empty_or_spaces(char *str);
-int	is_error_index(char *str);
+int			is_error_index(char *str);
+long		ft_atol(const char *str);
+void		ft_parss(int ac, char **av);
+void		is_splited(char **str);
 #endif
