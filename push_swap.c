@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/07 15:16:06 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 11:28:37 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	leaks()
 }
 int	main(int ac, char **av)
 {
-	atexit(leaks);
+	// atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;
@@ -43,16 +43,18 @@ int	main(int ac, char **av)
 		if (n < INT_MIN || n > INT_MAX)
 		{
 			write(1, "Error\n", 6);
+			// freefun(str);
+			// free_stack(&a);
 			exit(1);
 		}
 		str = ft_split(av[i], ' ');
-		is_splited(str);
+		fre_split(str);
 		j = 0;
 		k = 0;
 		if ((av[i][0] == '-' || av[i][0] == '+') && av[i][1] == '\0')
 		{
 			write(1, "Error\n", 6);
-			freefun(str);
+			// freefun(str);
 			exit(1);
 		}
 		while (str[j])
@@ -65,7 +67,7 @@ int	main(int ac, char **av)
 				if (!ft_isdigit(str[j][k]))
 				{
 					write(1, "Error\n", 6);
-					freefun(str);
+					// freefun(str);
 					exit(1);
 				}
 				k++;
@@ -79,6 +81,7 @@ int	main(int ac, char **av)
 	if (!ft_isdouble(a))
 	{
 		write(1, "Error\n", 6);
+		// freefun(str);
 		free_stack(&a);
 		exit(1);
 	}
@@ -116,7 +119,14 @@ int	main(int ac, char **av)
 		else
 		{
 			sort_all(&a, &b);
+			// to_b(&a, &b);
 		}
 	}
-	free_stacks(&a, &b);
+	// free_stacks(&a, &b);
+	// t_stack *tmp = a;
+	// while(tmp)
+	// {
+	// 	printf("%d\n", tmp->data);
+	// 	tmp = tmp->next;
+	// }
 }
