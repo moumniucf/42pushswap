@@ -6,15 +6,19 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 13:13:01 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 13:50:14 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
+void	leaks()
+{
+	system("leaks push_swap");
+}
 int	main(int ac, char **av)
 {
+	atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;
@@ -25,14 +29,17 @@ int	main(int ac, char **av)
 
 	b = NULL;
 	a = NULL;
-	if (ac == 1 || !av[1][0])
-		exit (1);
-	i = 1;
+	if (ac < 2)
+	{
+		write(1, "Error\n", 6);
+		exit(1);
+	}
 	if (is_empty_or_spaces(av[1]) || !is_error_index(av[1]))
 	{
 		write(1, "Error\n", 6);
 		exit(1);
 	}
+	i = 1;
 	while (i < ac)
 	{
 		long n = ft_atol(av[i]);
