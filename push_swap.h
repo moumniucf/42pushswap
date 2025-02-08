@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 11:36:13 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 14:52:28 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,4 @@ int			is_empty_or_spaces(char *str);
 int			is_error_index(char *str);
 long		ft_atol(const char *str);
 void		ft_parss(int ac, char **av);
-void		fre_split(char **str);
 #endif

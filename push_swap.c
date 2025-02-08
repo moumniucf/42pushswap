@@ -6,15 +6,19 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 14:01:15 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 16:24:57 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
+void	leaks()
+{
+	system("leaks push_swap");
+}
 int	main(int ac, char **av)
 {
+	atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;
@@ -25,23 +29,25 @@ int	main(int ac, char **av)
 
 	b = NULL;
 	a = NULL;
-	if (ac < 2)
+	if (ac == 1)
+		exit(1);
+	if ((ac > 1 && !av[1][0]))
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		exit(1);
 	}
 	if (is_empty_or_spaces(av[1]) || !is_error_index(av[1]))
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		exit(1);
 	}
 	i = 1;
 	while (i < ac)
 	{
 		long n = ft_atol(av[i]);
-		if (n < INT_MIN || n > INT_MAX)
+		if (n < INT_MIN || n > INT_MAX || !av[i][0])
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			exit(1);
 		}
 		str = ft_split(av[i], ' ');
@@ -49,7 +55,7 @@ int	main(int ac, char **av)
 		k = 0;
 		if ((av[i][0] == '-' || av[i][0] == '+') && av[i][1] == '\0')
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			exit(1);
 		}
 		while (str[j])
@@ -61,7 +67,7 @@ int	main(int ac, char **av)
 			{
 				if (!ft_isdigit(str[j][k]))
 				{
-					write(1, "Error\n", 6);
+					write(2, "Error\n", 6);
 					exit(1);
 				}
 				k++;
@@ -71,11 +77,11 @@ int	main(int ac, char **av)
 			j++;
 		}
 		i++;
-		fre_split(str);
+		freefun(str);
 	}
 	if (!ft_isdouble(a))
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		free_stack(&a);
 		exit(1);
 	}

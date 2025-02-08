@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:18:58 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 13:07:12 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 14:52:55 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,3 @@ int	ft_atoi(char const *str)
 	}
 	return (rst * x);
 }
-void	fre_split(char **str)
-{
-	int i = 0;
-	if (str == NULL)
-		freefun(str);
-	while(str[i])
-	{
-		free(str[i]);
-		i++;
-	}
-	free(str);
-} 

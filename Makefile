@@ -18,7 +18,7 @@ all : $(NAME)
 	@echo "compiling" $< "to" $@
 
 $(NAME) : $(OBJS) $(HEADER)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
+	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 clean : 
 	@rm -f $(OBJS)
 fclean : clean
