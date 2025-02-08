@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:22:06 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/07 12:04:22 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 13:05:20 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,21 @@ long ft_atol(const char *str)
 	int sign = 1;
 	long result = 0;
 
-	while (str[i] == ' ' || str[i] == '\t') // Skipping spaces
+	while (str[i] == ' ' || str[i] == '\t') 
 		i++;
 
-	if (str[i] == '-' || str[i] == '+') // Handling sign
+	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}
 
-	while (str[i] >= '0' && str[i] <= '9') // Converting to number
+	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
-		if (result * sign > INT_MAX || result * sign < INT_MIN) // Overflow check
-			return ((long)INT_MAX + 1); // Special value for overflow
+		if (result * sign > INT_MAX || result * sign < INT_MIN)
+			return ((long)INT_MAX + 1);
 		i++;
 	}
 	return (result * sign);
@@ -89,11 +89,3 @@ int	is_error_index(char *str)
 	}
 	return (1);
 }
-
-
-// }
-// // int main()
-// // {
-// // 	char *str = "-";
-// // 	printf("%d\n", is_error_index(str));
-// // }

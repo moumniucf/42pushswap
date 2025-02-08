@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 11:28:37 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 13:10:23 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ int	main(int ac, char **av)
 			exit(1);
 		}
 		str = ft_split(av[i], ' ');
-		fre_split(str);
 		j = 0;
 		k = 0;
 		if ((av[i][0] == '-' || av[i][0] == '+') && av[i][1] == '\0')
@@ -77,6 +76,7 @@ int	main(int ac, char **av)
 			j++;
 		}
 		i++;
+		fre_split(str);
 	}
 	if (!ft_isdouble(a))
 	{
@@ -122,11 +122,5 @@ int	main(int ac, char **av)
 			// to_b(&a, &b);
 		}
 	}
-	// free_stacks(&a, &b);
-	// t_stack *tmp = a;
-	// while(tmp)
-	// {
-	// 	printf("%d\n", tmp->data);
-	// 	tmp = tmp->next;
-	// }
+	free_stacks(&a, &b);
 }

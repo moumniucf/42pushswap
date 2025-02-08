@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:18:58 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 10:09:17 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 13:07:12 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,5 @@ void	fre_split(char **str)
 		free(str[i]);
 		i++;
 	}
+	free(str);
 } 
