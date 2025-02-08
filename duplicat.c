@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 13:22:06 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 13:05:20 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 16:45:30 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,24 @@ int	ft_isdouble(t_stack *head)
 	}
 	return (1);
 }
-long ft_atol(const char *str)
+
+long	ft_atol(const char *str)
 {
-	int i = 0;
-	int sign = 1;
-	long result = 0;
+	long	result;
+	int		sign;
+	int		i;
 
-	while (str[i] == ' ' || str[i] == '\t') 
+	result = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t')
 		i++;
-
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign = -1;
 		i++;
 	}
-
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
@@ -75,8 +77,9 @@ int	is_empty_or_spaces(char *str)
 
 int	is_error_index(char *str)
 {
-	int i = 0;
+	int	i;
 
+	i = 0;
 	while (str[i] == ' ' || str[i] == '\t')
 		i++;
 	if (str[i] == '-' || str[i] == '+')

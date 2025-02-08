@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 16:28:17 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 16:41:49 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	leaks()
 }
 int	main(int ac, char **av)
 {
-	atexit(leaks);
+	// atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;

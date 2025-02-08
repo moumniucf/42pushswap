@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 10:03:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/06 16:06:07 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 16:46:09 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	free_stack(t_stack **head)
 {
 	t_stack	*tmp;
-	t_stack *help;
+	t_stack	*help;
 
 	if (head == NULL)
 		return ;
