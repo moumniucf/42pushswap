@@ -6,19 +6,15 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 13:10:23 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 13:13:01 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	leaks()
-{
-	system("leaks push_swap");
-}
+
 int	main(int ac, char **av)
 {
-	// atexit(leaks);
 	char	**str;
 	t_stack	*a;
 	t_stack	*b;
@@ -43,8 +39,6 @@ int	main(int ac, char **av)
 		if (n < INT_MIN || n > INT_MAX)
 		{
 			write(1, "Error\n", 6);
-			// freefun(str);
-			// free_stack(&a);
 			exit(1);
 		}
 		str = ft_split(av[i], ' ');
@@ -53,7 +47,6 @@ int	main(int ac, char **av)
 		if ((av[i][0] == '-' || av[i][0] == '+') && av[i][1] == '\0')
 		{
 			write(1, "Error\n", 6);
-			// freefun(str);
 			exit(1);
 		}
 		while (str[j])
@@ -66,7 +59,6 @@ int	main(int ac, char **av)
 				if (!ft_isdigit(str[j][k]))
 				{
 					write(1, "Error\n", 6);
-					// freefun(str);
 					exit(1);
 				}
 				k++;
@@ -81,7 +73,6 @@ int	main(int ac, char **av)
 	if (!ft_isdouble(a))
 	{
 		write(1, "Error\n", 6);
-		// freefun(str);
 		free_stack(&a);
 		exit(1);
 	}
@@ -119,7 +110,6 @@ int	main(int ac, char **av)
 		else
 		{
 			sort_all(&a, &b);
-			// to_b(&a, &b);
 		}
 	}
 	free_stacks(&a, &b);
