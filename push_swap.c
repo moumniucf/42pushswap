@@ -75,7 +75,7 @@ int	main(int ac, char **av)
 			j++;
 		}
 		i++;
-		// fre_split(str);
+		fre_split(str);
 	}
 	if (!ft_isdouble(a))
 	{
