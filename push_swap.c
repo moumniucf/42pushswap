@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 16:24:57 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 16:28:17 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,6 @@ int	main(int ac, char **av)
 	if (!ft_isdouble(a))
 	{
 		write(2, "Error\n", 6);
-		free_stack(&a);
 		exit(1);
 	}
 	if (is_b_sort(a) && ft_lstsize(a) > 5)
