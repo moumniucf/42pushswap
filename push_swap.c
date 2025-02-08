@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 13:50:14 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/08 13:52:11 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int	main(int ac, char **av)
 			j++;
 		}
 		i++;
-		fre_split(str);
+		// fre_split(str);
 	}
 	if (!ft_isdouble(a))
 	{
