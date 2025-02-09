@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:42:50 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/07 12:02:56 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/09 10:31:57 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,18 +95,3 @@ char	**ft_split(char const *s, char c)
 	ptr[i] = NULL;
 	return (ptr);
 }
-// void	leaks()
-// {
-// 	system("leaks a.out");
-// }
-// int  main()
-// {
-// 	atexit(leaks);
-// 	char *s = "youssef moumni 42 1337";
-// 	char **str = ft_split(s, ' ');
-// 	while(*str)
-// 	{
-// 		printf("%s\n", *str);
-// 		str++;
-// 	}
-// }

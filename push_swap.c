@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 16:41:49 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/09 12:27:56 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	main(int ac, char **av)
 		while (str[j])
 		{
 			k = 0;
-			if ((str[j][k] == '-' || str[j][k] == '+' || str[j][k] == ' '))
+			if (str[j][k] == '-' || str[j][k] == '+')
 				k++;
 			while (str[j][k])
 			{
@@ -119,6 +119,12 @@ int	main(int ac, char **av)
 		{
 			sort_all(&a, &b);
 		}
+	}
+	t_stack *tmp = b;
+	while(tmp)
+	{
+		printf("%d\n", tmp->data);
+		tmp = tmp->next;
 	}
 	free_stacks(&a, &b);
 }
