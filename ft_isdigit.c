@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:13:35 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/09 17:15:13 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/09 18:59:38 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	splt_err(char **str)
 		if (!ft_isdigit(str[j][k]))
 		{
 			write(2, "Error\n", 6);
+			freefun(str);
 			exit(1);
 		}
 		k++;
