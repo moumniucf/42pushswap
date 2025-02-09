@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 14:52:28 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/09 18:12:26 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,12 @@ void		free_stacks(t_stack **a, t_stack **b);
 int			is_empty_or_spaces(char *str);
 int			is_error_index(char *str);
 long		ft_atol(const char *str);
-void		ft_parss(int ac, char **av);
+void		ft_parss(int ac, char **av, t_stack **a);
+void		av_err(char **av);
+void		av_overflow(int ac, char **av);
+void		back_satck(t_stack *a, t_stack *b);
+void		splt_err(char **str);
+void		help_srt_tree(t_stack **a);
+void		help_srt_four(t_stack **a, t_stack **b);
+void		help_srt_five(t_stack **a, t_stack **b);
 #endif
