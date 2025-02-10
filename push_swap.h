@@ -6,14 +6,14 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/09 19:00:31 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/10 12:39:17 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <libc.h>
+# include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
@@ -77,4 +77,14 @@ void		av_err(char **av);
 void		av_overflow(int ac, char **av);
 void		back_satck(t_stack *a, t_stack *b);
 void		splt_err(char **str);
+void		splt_err2(char **str);
+void		sorttree1(t_stack **head);
+void		sorttree2(t_stack **head);
+void		sorttree3(t_stack **head);
+void		sortfour_1(t_stack **head, t_stack **b);
+void		sortfour_2(t_stack **head, t_stack **b);
+void		sortfour_3(t_stack **head, t_stack **b);
+void		sortfive_1(t_stack **head, t_stack **b);
+void		sortfive_2(t_stack **head, t_stack **b);
+void		sortfive_3(t_stack **head, t_stack **b);
 #endif

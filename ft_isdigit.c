@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:13:35 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/09 18:59:38 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/10 11:30:54 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,23 +41,47 @@ void	back_satck(t_stack *a, t_stack *b)
 	}
 }
 
-void	splt_err(char **str)
+void	splt_err2(char **str)
 {
 	int	j;
 	int	k;
 
 	j = 0;
 	k = 0;
-	if ((str[j][k] == '-' || str[j][k] == '+' || str[j][k] == ' '))
+	while (str[j][k] == ' ')
 		k++;
-	while (str[j][k])
+	if ((str[j][k] == '-' || str[j][k] == '+') && str[j][k + 1] == '\0')
 	{
-		if (!ft_isdigit(str[j][k]))
+		write(2, "Error\n", 6);
+		freefun(str);
+		exit(1);
+	}
+}
+
+void	splt_err(char **str)
+{
+	int	j;
+	int	k;
+
+	j = 0;
+	while (str[j])
+	{
+		k = 0;
+		while (str[j][k] == ' ')
+			k++;
+		splt_err2(str);
+		if (str[j][k] == '-' || str[j][k] == '+')
+			k++;
+		while (str[j][k])
 		{
-			write(2, "Error\n", 6);
-			freefun(str);
-			exit(1);
+			if (!ft_isdigit(str[j][k]))
+			{
+				write(2, "Error\n", 6);
+				freefun(str);
+				exit(1);
+			}
+			k++;
 		}
-		k++;
+		j++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 10:01:25 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/09 17:13:37 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/10 11:08:42 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_parss(int ac, char **av, t_stack **a)
 	char	**str;
 	int		i;
 	int		j;
-	int		k;
 	t_stack	*new;
 
 	av_err(av);
@@ -28,7 +27,6 @@ void	ft_parss(int ac, char **av, t_stack **a)
 		str = ft_split(av[i], ' ');
 		splt_err(str);
 		j = 0;
-		k = 0;
 		while (str[j])
 		{
 			new = new_node(ft_atoi(str[j]));

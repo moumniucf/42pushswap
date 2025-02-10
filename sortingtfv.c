@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/08 13:41:28 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/10 12:39:39 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,132 +28,21 @@ t_stack	*small_node(t_stack *head)
 
 void	sortthree(t_stack **head)
 {
-	int		first;
-	int		second;
-	int		last;
-	t_stack	*small;
-
-	first = (*head)->data;
-	second = (*head)->next->data;
-	last = (*head)->next->next->data;
-	small = small_node(*head);
-	if ((small->data) == first)
-	{
-		if (second > last)
-		{
-			sa(head);
-			ra(head);
-		}
-	}
-	else if ((small->data) == second)
-	{
-		if (first > last)
-			ra(head);
-		else
-			sa(head);
-	}
-	else if ((small->data) == last)
-	{
-		if (first < second)
-			rra(head);
-		else
-		{
-			ra(head);
-			sa(head);
-		}
-	}
+	sorttree1(head);
+	sorttree2(head);
+	sorttree3(head);
 }
 
 void	sortfour(t_stack **head, t_stack **b)
 {
-	t_stack	*small;
-	int		first;
-	int		second;
-	int		last;
-	int		four;
-
-	first = (*head)->data;
-	second = (*head)->next->data;
-	last = (*head)->next->next->data;
-	four = (*head)->next->next->next->data;
-	small = small_node(*head);
-	if ((small->data) == first)
-	{
-		pb(head, b);
-		sortthree(head);
-		pa(head, b);
-	}
-	else if ((small->data) == second)
-	{
-		sa(head);
-		pb(head, b);
-		sortthree(head);
-		pa(head, b);
-	}
-	else if ((small->data) == last)
-	{
-		rra(head);
-		rra(head);
-		pb(head, b);
-		sortthree(head);
-		pa(head, b);
-	}
-	else if ((small->data) == four)
-	{
-		rra(head);
-		pb(head, b);
-		sortthree(head);
-		pa(head, b);
-	}
+	sortfour_1(head, b);
+	sortfour_2(head, b);
+	sortfour_3(head, b);
 }
 
 void	sortfive(t_stack **head, t_stack **b)
 {
-	int		second;
-	int		last;
-	int		four;
-	int		five;
-	t_stack	*small;
-
-	second = (*head)->next->data;
-	last = (*head)->next->next->data;
-	four = (*head)->next->next->next->data;
-	five = (*head)->next->next->next->next->data;
-	small = small_node(*head);
-	if ((small->data) == ((*head)->data))
-	{
-		pb(head, b);
-		sortfour(head, b);
-		pa(head, b);
-	}
-	else if ((small->data) == second)
-	{
-		sa(head);
-		pb(head, b);
-		sortfour(head, b);
-		pa(head, b);
-	}
-	else if ((small->data) == last)
-	{
-		ra(head);
-		ra(head);
-		pb(head, b);
-		sortfour(head, b);
-		pa(head, b);
-	}
-	else if ((small->data) == four)
-	{
-		rra(head);
-		rra(head);
-		pb(head, b);
-		sortfour(head, b);
-		pa(head, b);
-	}
-	else if ((small->data) == five)
-	{
-		rra(head);
-		pb(head, b);
-		sortfour(head, b);
-		pa(head, b);
-	}
+	sortfive_1(head, b);
+	sortfive_2(head, b);
+	sortfive_3(head, b);
 }

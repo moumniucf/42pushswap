@@ -6,19 +6,14 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/09 19:01:47 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/10 12:47:24 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	leaks()
-{
-	system("leaks push_swap");
-}
 int	main(int ac, char **av)
 {
-	// atexit(leaks);
 	t_stack	*a;
 	t_stack	*b;
 
