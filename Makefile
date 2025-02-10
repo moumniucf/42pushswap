@@ -11,7 +11,8 @@ B_HEADER = checker_bonus.h
 SRCS = creatstack.c push_swap.c swapab.c ft_lstlast.c ft_split.c  push_ab.c rotateab.c rev_rotate.c ft_atoi.c\
 sortingtfv.c parss.c ft_isdigit.c ft_lstsize.c ft_lstadd_back.c checkerror.c duplicat.c sortingall.c stacksort.c\
 sorttree.c sortfour.c sortfive.c 
-B_SRCS = ft_split.c checker_bonus.c ft_isdigit.c getnextline/get_next_line.c getnextline/get_next_line_utils.c
+B_SRCS = ft_split.c checker_bonus.c ft_isdigit.c getnextline/get_next_line.c getnextline/get_next_line_utils.c\
+utils_bonus.c rotate_bonus.c  push_ab_bonus.c parss_bonus.c 
 OBJS = $(SRCS:%.c=%.o)
 B_OBJS = $(B_SRCS:%.c=%.o)
 

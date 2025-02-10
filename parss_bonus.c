@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   parss_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 14:55:35 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/10 13:59:16 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/10 14:57:29 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "checker_bonus.h"
-
-int main(int ac, char **av)
+void	ft_parss(int ac, char **av)
 {
-	// char *len;
-	// len = get_next_line(STDIN_FILENO);
-	// while(len)
-	// {
-	// 	len = get_next_line(STDIN_FILENO);
-	// }
-	// if (len == av[i])
-	// {
-	// 	printf("isfhiov\n");
-	// }
-	// if (!ft_isdigit(len[i]))
-	// {
-	// 	printf("Error\n");
-	// }
-	
-	int i = 1;
-	while(i < ac)
+	char	**str;
+	int		i;
+
+	av_err(av);
+	i = 1;
+	while (i < ac)
 	{
-		ft_parss(ac, av);
+		av_overflow(ac, &av[i]);
+		str = ft_split(av[i], ' ');
+		splt_err(str);
+		i++;
+		freefun(str);
 	}
 }
