@@ -4,15 +4,15 @@ CHECKER = checker
 CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
-
 HEADER = push_swap.h
 B_HEADER = checker_bonus.h
 
 SRCS = creatstack.c push_swap.c swapab.c ft_lstlast.c ft_split.c  push_ab.c rotateab.c rev_rotate.c ft_atoi.c\
 sortingtfv.c parss.c ft_isdigit.c ft_lstsize.c ft_lstadd_back.c checkerror.c duplicat.c sortingall.c stacksort.c\
 sorttree.c sortfour.c sortfive.c 
-B_SRCS = ft_split.c checker_bonus.c ft_isdigit.c getnextline/get_next_line.c getnextline/get_next_line_utils.c\
-utils_bonus.c rotate_bonus.c  push_ab_bonus.c parss_bonus.c 
+B_SRCS = bonus/ft_split_bonus.c bonus/checker_bonus.c bonus/ft_isdigit_bonus.c bonus/getnextline/get_next_line.c bonus/getnextline/get_next_line_utils.c\
+bonus/utils_bonus.c bonus/rotate_bonus.c  bonus/push_ab_bonus.c bonus/parss_bonus.c bonus/ft_lstadd_back_bonus.c bonus/checkercmp_bonus.c bonus/swap_bonus.c\
+bonus/rev_rotate_bonus.c
 OBJS = $(SRCS:%.c=%.o)
 B_OBJS = $(B_SRCS:%.c=%.o)
 

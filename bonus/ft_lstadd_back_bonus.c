@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parss.c                                            :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/25 10:01:25 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 18:07:55 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/11 11:54:45 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/11 16:21:28 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
 
-void	ft_parss(int ac, char **av, t_stack **a)
+void	ft_lstadd_back(t_stack **lst, t_stack *new)
 {
-	char	**str;
-	int		i;
-	int		j;
-	t_stack	*new;
+	t_stack	*last;
 
-	av_err(av);
-	i = 1;
-	while (i < ac)
+	if (!*lst)
 	{
-		av_overflow(ac, &av[i]);
-		str = ft_split(av[i], ' ');
-		splt_err(str);
-		j = 0;
-		while (str[j])
-		{
-			new = new_node(ft_atoi(str[j]));
-			ft_lstadd_back(a, new);
-			j++;
-		}
-		i++;
-		freefun(str);
+		*lst = new;
+	}
+	else
+	{
+		last = ft_lstlast(*lst);
+		last->next = new;
+		new->prev = last;
 	}
 }

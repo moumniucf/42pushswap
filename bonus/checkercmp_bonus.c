@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parss.c                                            :+:      :+:    :+:   */
+/*   checkercmp_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/25 10:01:25 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 18:07:55 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/11 16:48:35 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/11 17:52:07 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
 
-void	ft_parss(int ac, char **av, t_stack **a)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	**str;
-	int		i;
-	int		j;
-	t_stack	*new;
-
-	av_err(av);
-	i = 1;
-	while (i < ac)
+	size_t i = 0;
+	while(i < n && (s1[i] || s2[i]))
 	{
-		av_overflow(ac, &av[i]);
-		str = ft_split(av[i], ' ');
-		splt_err(str);
-		j = 0;
-		while (str[j])
-		{
-			new = new_node(ft_atoi(str[j]));
-			ft_lstadd_back(a, new);
-			j++;
-		}
+		if ((unsigned char)s1[i] > (unsigned char)s2[i])
+			return (1);
+		else if ((unsigned char)s1[i] < (unsigned char)s2[i])
+			return (-1);
 		i++;
-		freefun(str);
 	}
+	return (0);
 }

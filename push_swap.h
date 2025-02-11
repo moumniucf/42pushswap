@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 12:39:17 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/11 14:40:14 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdbool.h>
+
+
+// #define malloc(x)  NULL 
 
 typedef struct s_stack
 {

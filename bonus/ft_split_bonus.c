@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 10:42:50 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 14:40:29 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/11 11:55:08 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/11 11:55:10 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+
+
+#include "checker_bonus.h"
 
 static char const	*skipc(char const *s, char c)
 {

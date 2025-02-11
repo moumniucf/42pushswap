@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker_bonus.c                                    :+:      :+:    :+:   */
+/*   ft_isdigit_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 14:55:35 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/11 11:57:10 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/11 18:18:40 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "checker_bonus.h"
-
-int main(int ac, char **av)
+int	ft_isdigit(int c)
 {
-	// char *len;
-	// len = get_next_line(STDIN_FILENO);
-	// while(len)
-	// {
-	// 	len = get_next_line(STDIN_FILENO);
-	// }
-	// if (len == av[i])
-	// {
-	// 	printf("isfhiov\n");
-	// }
-	// if (!ft_isdigit(len[i]))
-	// {
-	// 	printf("Error\n");
-	// }
-	
-	int i = 1;
-	while(i < ac)
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
+
+void	doublr_error(t_stack *a)
+{
+	if (!ft_isdouble(a))
 	{
-		ft_parss(ac, av);
+		write(1, "Error\n", 6);
+		exit(1);
 	}
 }

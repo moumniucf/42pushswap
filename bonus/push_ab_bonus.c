@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:04:13 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 14:04:30 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:01:05 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	pa(t_stack **a, t_stack **b)
 	if (*a)
 		(*a)->prev = top_b;
 	(*a) = top_b;
-	write(1, "pa\n", 3);
 }
 
 void	pb(t_stack **a, t_stack **b)
@@ -50,5 +49,4 @@ void	pb(t_stack **a, t_stack **b)
 	}
 	top_a->prev = NULL;
 	(*b) = top_a;
-	write(1, "pb\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:24 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 15:04:00 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/11 18:58:46 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,31 @@ void	free_stack(t_stack **head);
 void	free_stacks(t_stack **a, t_stack **b);
 t_stack	*ft_lstlast(t_stack *lst);
 int	is_b_sort(t_stack *head);
-void	ft_parss(int ac, char **av);
+void	ft_parss(int ac, char **av, t_stack **a);
 void	*freefun(char **s);
 void	av_err(char **av);
 int	is_empty_or_spaces(char *str);
 int	is_error_index(char *str);
 void	splt_err(char **str);
 void	splt_err2(char **str);
+t_stack	*new_node(int value);
+int	ft_atoi(char const *str);
+void	ft_lstadd_back(t_stack **lst, t_stack *new);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
+void	sw_ap(t_stack **head);
+void	sa(t_stack **a);
+void	sb(t_stack **b);
+void	ss(t_stack **a, t_stack **b);
+void	parss2checker(char *line, t_stack **a, t_stack **b);
+int	is_sort(t_stack *head);
+void	back_satck(t_stack *a, t_stack *b);
+void	doublr_error(t_stack *a);
+void	rra(t_stack **a);
+void	rrb(t_stack **b);
+void	rrr(t_stack **a, t_stack **b);
+void	check_sort(t_stack *a, t_stack *b, int len);
+void	rotate(t_stack **head);
+void	ra(t_stack **a);
+void	rb(t_stack **b);
+void	rr(t_stack **a, t_stack **b);
 #endif
