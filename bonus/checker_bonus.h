@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:24 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 18:58:46 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/11 19:49:42 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ void	doublr_error(t_stack *a);
 void	rra(t_stack **a);
 void	rrb(t_stack **b);
 void	rrr(t_stack **a, t_stack **b);
-void	check_sort(t_stack *a, t_stack *b, int len);
 void	rotate(t_stack **head);
 void	ra(t_stack **a);
 void	rb(t_stack **b);
