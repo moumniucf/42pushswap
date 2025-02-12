@@ -30,7 +30,7 @@ bonus : $(CHECKER)
 %.o : %.c
 	@$(CC) -c $< $(CFLAGS) -o $@
 	@echo "compiling" $< "to" $@
-$(CHECKER) : $(B_OBJS) $(HEADER)
+$(CHECKER) : $(B_OBJS) $(B_HEADER)
 	@$(CC) $(CFLAGS) $(B_OBJS) -o $(CHECKER)
 clean : 
 	@rm -f $(OBJS) $(B_OBJS)
