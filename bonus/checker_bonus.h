@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:24 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/12 15:17:52 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:45:38 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ void	ra(t_stack **a);
 void	rb(t_stack **b);
 void	rr(t_stack **a, t_stack **b);
 void	printstatus(t_stack *a, t_stack *b);
-
+void	print_error(void);
 #endif

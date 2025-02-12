@@ -6,11 +6,17 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/12 13:41:59 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:27:28 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
+
+void	print_error(void)
+{
+	write(2, "Error\n", 6);
+	exit(1);
+}
 
 void	printstatus(t_stack *a, t_stack *b)
 {
@@ -50,14 +56,12 @@ void	parss2checker(char *line, t_stack **a, t_stack **b)
 		rb(b);
 	else if (!ft_strncmp(line, "rr\n", 3))
 		rr(a, b);
+	else
+		print_error();
 }
-void	leaks()
-{
-	system("leaks checker");
-}
+
 int	main(int ac, char **av)
 {
-	atexit(leaks);
 	t_stack	*a;
 	t_stack	*b;
 	char	*line;
