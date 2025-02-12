@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorttree.c                                         :+:      :+:    :+:   */
+/*   sortthree.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 11:49:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 12:22:33 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/12 14:34:29 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/12 14:34:30 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "push_swap.h"
 
-void	sorttree1(t_stack **head)
+void	sortthree1(t_stack **head)
 {
 	int		first;
 	int		second;
@@ -33,7 +34,7 @@ void	sorttree1(t_stack **head)
 	}
 }
 
-void	sorttree2(t_stack **head)
+void	sortthree2(t_stack **head)
 {
 	int		first;
 	int		second;
@@ -53,7 +54,7 @@ void	sorttree2(t_stack **head)
 	}
 }
 
-void	sorttree3(t_stack **head)
+void	sortthree3(t_stack **head)
 {
 	int		first;
 	int		second;

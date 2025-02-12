@@ -6,23 +6,23 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/12 12:29:30 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/12 13:41:59 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-void	printstatus(t_stack *a)
+void	printstatus(t_stack *a, t_stack *b)
 {
 	if (is_sort(a))
 	{
 		write(1, "OK\n", 3);
-		free_stack(&a);
+		free_stacks(&a, &b);
 	}
 	else if (!is_sort(a))
 	{
 		write(1, "KO\n", 3);
-		free_stack(&a);
+		free_stacks(&a, &b);
 	}
 }
 
@@ -51,9 +51,13 @@ void	parss2checker(char *line, t_stack **a, t_stack **b)
 	else if (!ft_strncmp(line, "rr\n", 3))
 		rr(a, b);
 }
-
+void	leaks()
+{
+	system("leaks checker");
+}
 int	main(int ac, char **av)
 {
+	atexit(leaks);
 	t_stack	*a;
 	t_stack	*b;
 	char	*line;
@@ -72,5 +76,5 @@ int	main(int ac, char **av)
 		line = get_next_line(STDIN_FILENO);
 	}
 	free(line);
-	printstatus(a);
+	printstatus(a, b);
 }

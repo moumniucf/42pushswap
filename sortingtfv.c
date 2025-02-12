@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 17:29:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 12:39:39 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/12 14:33:33 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ t_stack	*small_node(t_stack *head)
 
 void	sortthree(t_stack **head)
 {
-	sorttree1(head);
-	sorttree2(head);
-	sorttree3(head);
+	sortthree1(head);
+	sortthree2(head);
+	sortthree3(head);
 }
 
 void	sortfour(t_stack **head, t_stack **b)
