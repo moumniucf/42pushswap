@@ -6,11 +6,25 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 19:51:58 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/12 12:13:34 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
+
+void	printstatus(t_stack *a)
+{
+	if (is_sort(a))
+	{
+		write(1, "OK\n", 3);
+		free_stack(&a);
+	}
+	else if (!is_sort(a))
+	{
+		write(1, "KO\n", 3);
+		free_stack(&a);
+	}
+}
 
 void	parss2checker(char *line, t_stack **a, t_stack **b)
 {
@@ -49,18 +63,14 @@ int	main(int ac, char **av)
 	a = NULL;
 	b = NULL;
 	ft_parss(ac, av, &a);
-	back_satck(a, b);
+	doubl_error(a);
 	line = get_next_line(STDIN_FILENO);
 	while (line)
 	{
 		parss2checker(line, &a, &b);
-		get_next_line(STDIN_FILENO);
+		free(line);
 		line = get_next_line(STDIN_FILENO);
 	}
-	if (!is_sort(a))
-	{
-		write(1, "OK\n", 3);
-	}
-	else
-		write(1, "KO\n", 3);
+	free(line);
+	printstatus(a);
 }

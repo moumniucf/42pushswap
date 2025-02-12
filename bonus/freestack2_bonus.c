@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parss_bonus.c                                      :+:      :+:    :+:   */
+/*   freestack2_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/10 13:59:16 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/12 11:15:59 by youmoumn         ###   ########.fr       */
+/*   Created: 2025/02/12 11:18:41 by youmoumn          #+#    #+#             */
+/*   Updated: 2025/02/12 11:23:28 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-void	ft_parss(int ac, char **av, t_stack **a)
+void	free_stack(t_stack **head)
 {
-	char	**str;
-	int		i;
-	int		j;
-	t_stack	*new;
+	t_stack	*tmp;
+	t_stack	*help;
 
-	av_err(av);
-	i = 1;
-	while (i < ac)
+	if (head == NULL)
+		return ;
+	help = *head;
+	while (help)
 	{
-		av_overflow(ac, &av[i]);
-		str = ft_split(av[i], ' ');
-		splt_err(str);
-		j = 0;
-		while (str[j])
-		{
-			new = new_node(ft_atoi(str[j]));
-			ft_lstadd_back(a, new);
-			j++;
-		}
-		i++;
-		freefun(str);
+		tmp = (help)->next;
+		free(help);
+		help = tmp;
 	}
+	head = NULL;
+}
+
+void	free_stacks(t_stack **a, t_stack **b)
+{
+	free_stack(a);
+	free_stack(b);
 }

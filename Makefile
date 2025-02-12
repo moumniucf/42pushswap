@@ -12,7 +12,7 @@ sortingtfv.c parss.c ft_isdigit.c ft_lstsize.c ft_lstadd_back.c checkerror.c dup
 sorttree.c sortfour.c sortfive.c 
 B_SRCS = bonus/ft_split_bonus.c bonus/checker_bonus.c bonus/ft_isdigit_bonus.c bonus/getnextline/get_next_line.c bonus/getnextline/get_next_line_utils.c\
 bonus/utils_bonus.c bonus/rotate_bonus.c  bonus/push_ab_bonus.c bonus/parss_bonus.c bonus/ft_lstadd_back_bonus.c bonus/checkercmp_bonus.c bonus/swap_bonus.c\
-bonus/rev_rotate_bonus.c
+bonus/rev_rotate_bonus.c bonus/freestack2_bonus.c bonus/utils2_bonus.c bonus/utils4_bonus.c bonus/utils5_bonus.c bonus/utils3_bonus.c
 OBJS = $(SRCS:%.c=%.o)
 B_OBJS = $(B_SRCS:%.c=%.o)
 

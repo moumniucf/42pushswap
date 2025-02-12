@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:22:53 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 14:40:14 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/12 11:30:40 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <limits.h>
-# include <stdbool.h>
-
-
-// #define malloc(x)  NULL 
 
 typedef struct s_stack
 {
@@ -34,7 +29,6 @@ typedef struct s_stack
 
 t_stack		*new_node(int value);
 t_stack		*ft_lstlast(t_stack *lst);
-t_stack		*medium_node(t_stack *head);
 t_stack		*small_node(t_stack *head);
 t_stack		*big_node(t_stack *head);
 int			ft_atoi(const char *str);
