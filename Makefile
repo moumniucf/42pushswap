@@ -25,7 +25,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-#//                    bonus                  //#
+
 bonus : $(CHECKER)
 %.o : %.c
 	@$(CC) -c $< $(CFLAGS) -o $@
