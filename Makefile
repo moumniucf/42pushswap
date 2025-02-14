@@ -3,7 +3,7 @@ CHECKER = checker
 
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror 
 HEADER = push_swap.h
 B_HEADER = bonus/checker_bonus.h
 

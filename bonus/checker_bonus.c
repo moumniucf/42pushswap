@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/14 17:00:53 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/14 19:39:10 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,11 @@ void	parss2checker(char *line, t_stack **a, t_stack **b)
 	else if (!ft_strncmp(line, "rr\n", 3))
 		rr(a, b);
 	else
+	{
 		print_error();
+		free_stacks(a, b);
+	}
 }
-
 int	main(int ac, char **av)
 {
 	t_stack	*a;
