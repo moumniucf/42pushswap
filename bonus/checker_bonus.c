@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:14 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/15 10:58:11 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/15 14:06:37 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	print_error(void)
 
 void	printstatus(t_stack *a, t_stack *b)
 {
-	if ((is_sort(a) || ft_lstsize(a) == 1) && !b)
+	if ((is_sort(a) || ft_lstsize(a) == 1))
 	{
 		write(1, "OK\n", 3);
 		free_stacks(&a, &b);
