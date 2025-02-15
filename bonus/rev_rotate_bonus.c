@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:30:08 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/15 14:06:06 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/15 14:48:07 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	rev_rotate(t_stack **head)
 {
-	int		size;
 	t_stack	*last;
 
-	size = ft_lstsize(*head);
 	if (!head || !(*head) || !(*head)->next)
 		return ;
 	last = ft_lstlast(*head);
