@@ -36,5 +36,5 @@ clean :
 	@rm -f $(OBJS) $(B_OBJS)
 fclean : clean
 	@rm -f $(NAME) $(CHECKER)
-re : fclean all bonus
+re : fclean all
 PHONY : fclean
