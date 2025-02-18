@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 11:53:30 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 14:37:44 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/18 18:40:05 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int ac, char **av)
 	t_stack	*b;
 
 	if (ac == 1)
-		exit(1);
+		exit(0);
 	b = NULL;
 	a = NULL;
 	ft_parss(ac, av, &a);
