@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 10:01:25 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/19 12:03:33 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:10:55 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_parss(int ac, char **av, t_stack **a)
 	int		j;
 	t_stack	*new;
 
-	av_err(av, a);
+	av_err(ac, av, a);
 	i = 1;
 	while (i < ac)
 	{

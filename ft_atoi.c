@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 16:18:58 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/19 12:03:16 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:11:39 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,22 @@ int	ft_atoi(char const *str)
 	return (rst * x);
 }
 
-void	av_err(char **av, t_stack **a)
+void	av_err(int ac, char **av, t_stack **a)
 {
 	int	i;
+	int	j;
 
 	i = 0;
-	if (is_empty_or_spaces(av[1]) || !is_error_index(av[1]))
+	j = 0;
+	while (j < ac)
 	{
-		write(2, "Error\n", 6);
-		free_stack(a);
-		exit(1);
+		if (is_empty_or_spaces(av[j]) || !is_error_index(av[j]))
+		{
+			write(2, "Error\n", 6);
+			free_stack(a);
+			exit(1);
+		}
+		j++;
 	}
 	if ((av[i][0] == '-' || av[i][0] == '+') && av[i][1] == '\0')
 	{

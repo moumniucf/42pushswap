@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 11:17:46 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/19 13:01:37 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:26:58 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,22 @@ int	is_error_index(char *str)
 	return (1);
 }
 
-void	av_err(char **av, t_stack **a)
+void	av_err(int ac, char **av, t_stack **a)
 {
 	int	i;
+	int	j;
 
+	j = 1;
 	i = 0;
-	if (is_empty_or_spaces(av[1]) || !is_error_index(av[1]))
+	while (j < ac)
 	{
-		write(2, "Error\n", 6);
-		free_stack(a);
-		exit(1);
+		if (is_empty_or_spaces(av[j]) || !is_error_index(av[j]))
+		{
+			write(2, "Error\n", 6);
+			free_stack(a);
+			exit(1);
+		}
+		j++;
 	}
 	if ((av[i][0] == '-' || av[i][0] == '+') && av[i][1] == '\0')
 	{
@@ -62,4 +68,3 @@ void	av_err(char **av, t_stack **a)
 		exit(1);
 	}
 }
-
