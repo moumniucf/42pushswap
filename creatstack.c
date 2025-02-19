@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/17 17:24:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/11 10:43:47 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:13:06 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	is_b_sort(t_stack *head)
 	if (ft_lstsize(head) == 1)
 	{
 		free_stack(&head);
-		exit(1);
+		exit(0);
 	}
 	while (head->next)
 	{
