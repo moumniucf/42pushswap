@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:58:24 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/14 18:53:46 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:12:19 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		ft_isdigit(int c);
 int		ft_isdouble(t_stack *head);
 int		ft_lstsize(t_stack *lst);
 long	ft_atol(const char *str);
-void	av_overflow(int ac, char **av);
+void	av_overflow(int ac, char **av, t_stack **a);
 void	pa(t_stack **a, t_stack **b);
 void	pb(t_stack **a, t_stack **b);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
@@ -41,7 +41,7 @@ t_stack	*ft_lstlast(t_stack *lst);
 int		is_b_sort(t_stack *head);
 void	ft_parss(int ac, char **av, t_stack **a);
 void	*freefun(char **s);
-void	av_err(char **av);
+void	av_err(char **av, t_stack **a);
 int		is_empty_or_spaces(char *str);
 int		is_error_index(char *str);
 void	splt_err(char **str);

@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:00:47 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/12 12:13:51 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:09:15 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ long	ft_atol(const char *str)
 	return (result * sign);
 }
 
-void	av_overflow(int ac, char **av)
+void	av_overflow(int ac, char **av, t_stack **a)
 {
 	long	n;
 	int		i;
@@ -51,6 +51,7 @@ void	av_overflow(int ac, char **av)
 	if (n < INT_MIN || n > INT_MAX || !av[i][0])
 	{
 		write(2, "Error\n", 6);
+		free_stack(a);
 		exit(1);
 	}
 }

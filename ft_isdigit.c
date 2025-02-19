@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:13:35 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/10 11:30:54 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 11:58:50 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	back_satck(t_stack *a, t_stack *b)
 	}
 }
 
-void	splt_err2(char **str)
+void	splt_err2(char **str, t_stack **a)
 {
 	int	j;
 	int	k;
@@ -54,11 +54,12 @@ void	splt_err2(char **str)
 	{
 		write(2, "Error\n", 6);
 		freefun(str);
+		free_stack(a);
 		exit(1);
 	}
 }
 
-void	splt_err(char **str)
+void	splt_err(char **str, t_stack **a)
 {
 	int	j;
 	int	k;
@@ -69,7 +70,7 @@ void	splt_err(char **str)
 		k = 0;
 		while (str[j][k] == ' ')
 			k++;
-		splt_err2(str);
+		splt_err2(str, a);
 		if (str[j][k] == '-' || str[j][k] == '+')
 			k++;
 		while (str[j][k])
@@ -78,6 +79,7 @@ void	splt_err(char **str)
 			{
 				write(2, "Error\n", 6);
 				freefun(str);
+				free_stack(a);
 				exit(1);
 			}
 			k++;
