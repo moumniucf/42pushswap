@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/12 11:17:46 by youmoumn          #+#    #+#             */
-/*   Updated: 2025/02/19 12:17:40 by youmoumn         ###   ########.fr       */
+/*   Updated: 2025/02/19 13:01:37 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	av_err(char **av, t_stack **a)
 	int	i;
 
 	i = 0;
-	if (is_empty_or_spaces(av[i]) || !is_error_index(av[i]))
+	if (is_empty_or_spaces(av[1]) || !is_error_index(av[1]))
 	{
 		write(2, "Error\n", 6);
 		free_stack(a);
